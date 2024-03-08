@@ -2,7 +2,7 @@
 layout: post
 title:  "Handling Twitter Data with Pandas: Overcoming CSV Challenges"
 date:   2024-03-08
-excerpt: "When saving Twitter data to CSV files using pandas, you might encounter issues due to special characters in tweets, which can cause parsing errors later. To avoid these problems, an effective solution involves using a custom function. This method ensures that all text, including rare characters, is accurately preserved. This approach not only prevents common data integrity issues."
+excerpt: "When saving Twitter data to CSV files using pandas, you might encounter issues due to special characters in tweets, which can cause parsing errors later. I wrote a simple function that allows to save the data to a csv file preserving text integrity and preventing parsing errors."
 ---
 
 Working with Twitter data can be challenging, and not just because of the paywall. When you're dealing with data involving Twitter data, saving and retrieving this data efficiently without issues is a must. While the pandas library in Python is the standard tool, saving DataFrame content containing tweet texts to CSV files using pandas can lead to issues when trying to read these files later.
