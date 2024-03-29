@@ -2,11 +2,22 @@ papers:
 
   - title: "Does Learning about Government Transparency Boost Citizens' Trust? A Factorial Survey Experiment"
     authors: "Juan Pablo Ripamonti"
-    venue: "📄 Under review"
+    venue: "📄 Government Information Quarterly"
     #sourceLink: ""
     #paper_pdf: ""
-    #year: "2024"
+    year: "Revise and Resubmit"
     selected: y
+
+
+  - title: "What other people say: transparency of citizen voice in public services"
+    authors: "Rebecca Kirley, Juan Pablo Ripamonti"
+    venue: "🚧 Working paper"
+    sourceLink: ""
+    #preprint: "http://arxiv.org/abs/2309.11599"
+    #prereg: "https://osf.io/kwbev?view_only=c5639dcc6292482b8bd79f2086b38d24"
+    #year: "2023"
+    selected: y
+
 
   - title: "A Machine Learning Approach to Measuring Trust"
     authors: "Juan Pablo Ripamonti"
@@ -25,7 +36,7 @@ papers:
     #preprint: "https://arxiv.org/abs/2309.11029"
     #data: "https://osf.io/n2b3s/?view_only=0ae0c8d5d110493d933ab76a633fedd6"
     #prereg: "https://osf.io/n2b3s/?view_only=0ae0c8d5d110493d933ab76a633fedd6"
-    year: "2023"
+    #year: "2023"
     selected: y
 
   - title: "3D Printing: A New Industrial Revolution?"
