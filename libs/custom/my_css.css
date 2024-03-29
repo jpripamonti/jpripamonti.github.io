@@ -188,12 +188,9 @@ h4 {
 .read-more-link {
   display: inline-block;
   margin-top: 0px; /* Adjusts space above the Read More link if necessary */
-  font-size: small;
-  padding: 3px 3px; /* Optional: Adjusts padding for better visual appeal */
-  color: #ffffff; /* Optional: Changes the text color to white */
-  background-color: #00478A; /* Optional: Changes the background color to white */
+  font-size: medium;
+  color: #00478A; /* Optional: Changes the text color to white */
   text-decoration: none; /* Removes underline from the link */
-  border-radius: 5px; /* Optional: Adds rounded corners to the link */
 }
 
 .blog-post-detail {
