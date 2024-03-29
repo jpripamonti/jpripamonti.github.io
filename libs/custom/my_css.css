@@ -231,3 +231,16 @@ h4 {
 .toggle-abstract-btn:hover {
   background-color: #dee4eb; /* Darker shade of blue on hover */
 }
+
+.abstract {
+  display: none; /* Keeps the abstract hidden initially */
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f0f0f0; /* Example background color */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: 'Arial', sans-serif; /* Example font family */
+  color: #333; /* Example text color */
+  font-size: 1rem; /* Example font size */
+  line-height: 1.5; /* Example line height for better readability */
+}
