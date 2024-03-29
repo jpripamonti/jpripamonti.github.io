@@ -163,12 +163,22 @@ title: Home
 
 
 
-
-
-
 <!-- ========== THANKS ========== -->  
 <div class="docs-section" id="template">
     <h4>Website Design</h4>
     Original design by <a href="https://web.stanford.edu/~msaveski/" target="_blank">Martin Saveski</a>, forked by permission from <a href="https://github.com/mmoorr/www_personal" target="_blank">Mor Naaman's Github</a>. 
     <!--<br/>-->
 </div>
+
+<!-- ========== JavaScript for Toggle Functionality ========== -->  
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.toggle-abstract-btn').forEach(button => {
+      button.addEventListener('click', function() {
+        var abstract = this.nextElementSibling;
+        abstract.style.display = abstract.style.display === 'none' ? 'block' : 'none';
+      });
+    });
+  });
+</script>
