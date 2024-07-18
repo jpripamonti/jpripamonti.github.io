@@ -1,26 +1,12 @@
 papers:
 
-  - title: "Does Learning about Government Transparency Boost Citizens' Trust? A Factorial Survey Experiment"
+  - title: "Does Informing about Government Transparency Boost Trust? Exploring an Overlooked Mechanism"
     authors: "Juan Pablo Ripamonti"
     venue: "📄 Government Information Quarterly"
     #sourceLink: ""
     #paper_pdf: ""
-    abstract: "Governments often implement transparency policies with the aim of improving citizens’ trust. However, the effects of these policies are not completely understood.
-Existing empirical literature primarily focuses on citizens consumption of government
-information, while often overlooking the impact of the act of disclosure itself. To
-address this gap, this study examines citizens’ responses to being informed of the act of government
-disclosure, regardless of the content disclosed. Using a factorial survey experiment,
-the research manipulates the motivations, types, and levels of information disclosure
-across two different organizations to assess their impact on public trust. Results show
-that overall, being informed of the act of disclosure significantly enhances perceptions of trustworthiness.
-However, this effect varies based on citizens’ attitudes towards information disclosure:
-those indifferent to it experience a negative impact, while its positive influence grows
-as individuals place more importance on transparency. Additionally, the disclosure
-of performance information emerges as the most impactful form of disclosure and it
-interacts with disclosure of financial information. Moreover, public trust increases
-when organizations disclose more information than legally mandated. These findings
-contribute to a broader understanding of the relationship between government transparency and public trust."
-    year: "Revise and Resubmit"
+    abstract: "Governments implement transparency policies aiming to enhance citizens’ trust, but the outcomes of these efforts are complex and not fully understood. Existing literature often focuses on how citizens consume government information, but tends to overlook the impact of the act of disclosure itself. This study seeks to fill this gap by examining citizens’ responses to the act of government disclosure, independent of the content dis- closed. Through a factorial survey experiment, the research manipulates motivations, types, and levels of information disclosure across two distinct organizations to assess their impact on public trust. The findings reveal that the act of disclosure generally enhances trust perceptions, but this effect is significantly modulated by individuals’ pre-existing attitudes towards transparency. Those indifferent about transparency do not show increased trust, while for those who value transparency, trust increases notably. The study also finds that the disclosure of performance information, partic- ularly when combined with financial information, has the most substantial impact on trust. Moreover, public trust is higher when organizations disclose more information than legally required. These results contribute to a more nuanced understanding of how government transparency influences public trust and highlight the importance of considering citizen attitudes in transparency initiatives."
+    year: "Accepted for Publication"
     selected: y
 
 
@@ -82,7 +68,7 @@ and the precursors of citizens’ trust."
     #prereg: ""
     #paper_pdf: ""
     year: "2018"
-    selected: n
+    selected: y
 
 
 
