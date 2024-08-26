@@ -224,20 +224,22 @@ h4 {
 }
 
 
-/* Add a hover effect for the toggle button for better user interaction feedback */
-.toggle-abstract-btn:hover {
-  background-color: #dee4eb; /* Darker shade of blue on hover */
-}
 
 .abstract {
-  display: none; /* Keeps the abstract hidden initially */
+  display: block; /* Ensure the abstract is always visible */
   margin-top: 10px;
   padding: 10px;
-  background-color: #f0f0f0; /* Example background color */
-  border: 1px solid #ddd;
+  background-color: #f9f9f9e7; /* Slightly lighter background for admonition */
+  border-left: 5px solid #00478A; /* Admonition style with a left border */
   border-radius: 5px;
-  font-family: 'Arial', sans-serif; /* Example font family */
-  color: #333; /* Example text color */
-  font-size: 1rem; /* Example font size */
-  line-height: 1.5; /* Example line height for better readability */
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.abstract-title {
+  margin-bottom: 5px;
+  color: #000000; /* Same color as the border */
+  font-size: 1.1rem;
 }
