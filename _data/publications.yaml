@@ -11,10 +11,20 @@ papers:
 
 
   - title: "What other people say: transparency of citizen voice in public services"
-    authors: "Rebecca Kirley, Juan Pablo Ripamonti"
+    authors: "Rebecca Kirley, Juan Pablo Ripamonti, Maria Cucciniello"
     venue: "🚧 Working paper"
     sourceLink: ""
     abstract: "This research explores the role of transparency of administrative justice and individual redress mechanisms in public administrations. Through a mixed-methods approach, it seeks to conceptualize the transparency of citizen voice within public services and assess this transparency across education, and policing in liberal democracies. The study aims to enhance our understanding of how these mechanisms influence public accountability and democratic governance."
+    #preprint: "http://arxiv.org/abs/2309.11599"
+    #prereg: "https://osf.io/kwbev?view_only=c5639dcc6292482b8bd79f2086b38d24"
+    #year: "2023"
+    selected: y
+
+  - title: "Transparency and trust in government. A multi-level framework."
+    authors: "Juan Pablo Ripamonti, Greg Porumbescu"
+    venue: "🚧 Working paper"
+    sourceLink: ""
+    abstract: "Transparency is often promoted as a mechanism to enhance citizen trust in public institutions. However, empirical evidence reveals a nuanced reality: transparency can both strengthen and undermine trust. These mixed findings underscore the need for a deeper understanding of how transparency influences trust, accounting for micro-, meso-, and macro-level pathways, as well as its gradual, indirect, and diffuse effects. Drawing on insights from public administration and political science, this paper proposes a multi-level theoretical framework that synthesizes existing explanations of the transparency-trust relationship. The framework addresses the interplay between individual, organizational, and institutional dynamics, offering a structured approach to reinterpret empirical findings and guide the design of effective transparency policies."
     #preprint: "http://arxiv.org/abs/2309.11599"
     #prereg: "https://osf.io/kwbev?view_only=c5639dcc6292482b8bd79f2086b38d24"
     #year: "2023"
