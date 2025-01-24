@@ -5,24 +5,21 @@ papers:
     venue: "📄 Government Information Quarterly"
     #sourceLink: "https://www.sciencedirect.com/science/article/pii/S0740624X24000522"
     paper_pdf: "https://www.sciencedirect.com/science/article/pii/S0740624X24000522"
-    abstract: "Governments implement transparency policies aiming to enhance citizens' trust, but the outcomes of these efforts are complex and not fully understood. Existing literature often focuses on how citizens consume government information, but tends to overlook the impact of the act of disclosure itself. This study seeks to fill this gap by examining citizens' responses to the act of government disclosure, independent of the content disclosed. Through a factorial survey experiment, the research manipulates motivations, types, and levels of information disclosure across two distinct organizations to assess their impact on public trust. The findings reveal that the act of disclosure generally enhances trust perceptions, but this effect is significantly modulated by individuals' pre-existing attitudes toward transparency. Those indifferent about transparency do not show increased trust, while for those who value transparency, trust increases notably. The study also finds that the disclosure of performance information, particularly when combined with financial information, has the most substantial impact on trust. Moreover, public trust is higher when organizations disclose more information than legally required. These results contribute to a more nuanced understanding of how government transparency influences public trust and highlight the importance of considering citizen attitudes in transparency initiatives."
+    abstract: | 
+      Governments implement transparency policies aiming to enhance citizens' trust, but the outcomes of these efforts are complex and not fully understood. Existing literature often focuses on how citizens consume government information, but tends to overlook the impact of the act of disclosure itself. This study seeks to fill this gap by examining citizens' responses to the act of government disclosure, independent of the content disclosed. Through a factorial survey experiment, the research manipulates motivations, types, and levels of information disclosure across two distinct organizations to assess their impact on public trust. The findings reveal that the act of disclosure generally enhances trust perceptions, but this effect is significantly modulated by individuals' pre-existing attitudes toward transparency. Those indifferent about transparency do not show increased trust, while for those who value transparency, trust increases notably. The study also finds that the disclosure of performance information, particularly when combined with financial information, has the most substantial impact on trust. Moreover, public trust is higher when organizations disclose more information than legally required. These results contribute to a more nuanced understanding of how government transparency influences public trust and highlight the importance of considering citizen attitudes in transparency initiatives.
     year: "2024"
     selected: y
 
-
-  - title: "What other people say: transparency of citizen voice in public services"
+  - title: "Strategies for mediating downstream citizen voice into public policy and service ecosystems"
     authors: "Rebecca Kirley, Juan Pablo Ripamonti, Maria Cucciniello"
-    venue: "🚧 Working paper"
+    venue: "🚧 In preparation"
     sourceLink: ""
-    abstract: "This research explores the role of transparency of administrative justice and individual redress mechanisms in public administrations. Through a mixed-methods approach, it seeks to conceptualize the transparency of citizen voice within public services and assess this transparency across education, and policing in liberal democracies. The study aims to enhance our understanding of how these mechanisms influence public accountability and democratic governance."
-    #preprint: "http://arxiv.org/abs/2309.11599"
-    #prereg: "https://osf.io/kwbev?view_only=c5639dcc6292482b8bd79f2086b38d24"
-    #year: "2023"
+    abstract: "Mixed methods study on how oversight institutions mediate citizen complaints information into public policy."
     selected: y
 
   - title: "Transparency and trust in government. A multi-level framework."
     authors: "Juan Pablo Ripamonti, Greg Porumbescu"
-    venue: "🚧 Working paper"
+    venue: "🚧 In preparation"
     sourceLink: ""
     abstract: "Transparency is often promoted as a mechanism to enhance citizen trust in public institutions. However, empirical evidence reveals a nuanced reality: transparency can both strengthen and undermine trust. These mixed findings underscore the need for a deeper understanding of how transparency influences trust, accounting for micro-, meso-, and macro-level pathways, as well as its gradual, indirect, and diffuse effects. Drawing on insights from public administration and political science, this paper proposes a multi-level theoretical framework that synthesizes existing explanations of the transparency-trust relationship. The framework addresses the interplay between individual, organizational, and institutional dynamics, offering a structured approach to reinterpret empirical findings and guide the design of effective transparency policies."
     #preprint: "http://arxiv.org/abs/2309.11599"
@@ -30,42 +27,22 @@ papers:
     #year: "2023"
     selected: y
 
-
-  - title: "A Machine Learning Approach to Measuring Trust"
+  - title: "A Topic Modeling Analysis of Twitter Posts: Ten Years of Public Opinion on U.S. Institutions"
     authors: "Juan Pablo Ripamonti"
-    venue: "🚧 Working paper"
+    venue: "🚧 In preparation"
     sourceLink: ""
-    abstract: "Trust in government is integral to the functioning of democratic systems, impacting areas like policy adherence and economic well-being. Surveys, traditionally used to assess public trust, have limitations including
-potential response biases, costs, sporadic data collection, and an emphasis
-on major governmental entities
-This article proposes a supplementary approach, analyzing social media behaviors, to measure public trust in key U.S. government entities. Using machine learning techniques, I develop trust indicators based on Twitter behavior. The preliminary findings suggest modest
-correlations between these indicators and traditional survey measures in
-certain demographics. The paper provides a balanced perspective on the
-potential and challenges of these social media-derived indicators in capturing nuances of public trust."
-    #preprint: "http://arxiv.org/abs/2309.11599"
-    #prereg: "https://osf.io/kwbev?view_only=c5639dcc6292482b8bd79f2086b38d24"
+    abstract: "Analysis of Twitter posts on the U.S. Congress, Supreme Court, and Executive Branch using BERTopic."
     #year: "2023"
     selected: y
 
-    
   - title: "The Influence of Transparency on Trust in Government. A Systematic Review of Empirical Research"
     authors: "Juan Pablo Ripamonti"
-    venue: "🚧 Working paper"
+    venue: "🚧 In preparation"
     #sourceLink: ""
     #preprint: "https://arxiv.org/abs/2309.11029"
     #data: "https://osf.io/n2b3s/?view_only=0ae0c8d5d110493d933ab76a633fedd6"
     #prereg: "https://osf.io/n2b3s/?view_only=0ae0c8d5d110493d933ab76a633fedd6"
-    abstract: "Citizens’ trust in government is a fundamental prerequisite for good governance. There exists a debate
-on whether trust can be bolstered through government transparency or if transparency might actually
-diminish trust. In this article, I aim to reconcile these divergent theoretical stances by elucidating the
-primary pathways through which transparency can impact citizens’ trust. I undertake a systematic review
-of the empirical literature to ascertain our current understanding of these pathways. The review’s findings
-suggest that existing empirical research only addresses a subset of these pathways, and there is a lack of
-consensus among these studies on whether transparency fosters trust. Furthermore, the empirical literature
-largely neglects the potential variability in the effects of transparency on government trust across different
-social groups, which could result in a polarization of trust. These findings bear significant implications for
-practitioners aiming to enhance citizens’ trust and for scholars interested in the outcomes of transparency
-and the precursors of citizens’ trust."
+    abstract: "Citizens’ trust in government is a fundamental prerequisite for good governance. There exists a debate on whether trust can be bolstered through government transparency or if transparency might actually diminish trust. In this article, I aim to reconcile these divergent theoretical stances by elucidating the primary pathways through which transparency can impact citizens’ trust. I undertake a systematic review of the empirical literature to ascertain our current understanding of these pathways. The review’s findings suggest that existing empirical research only addresses a subset of these pathways, and there is a lack of consensus among these studies on whether transparency fosters trust. Furthermore, the empirical literature largely neglects the potential variability in the effects of transparency on government trust across different social groups, which could result in a polarization of trust. These findings bear significant implications for practitioners aiming to enhance citizens’ trust and for scholars interested in the outcomes of transparency and the precursors of citizens’ trust."
     #year: "2023"
     selected: y
 
