@@ -17,7 +17,7 @@ papers:
     abstract: "Mixed methods study on how oversight institutions mediate citizen complaints information into public policy."
     selected: y
 
-  - title: "Transparency and trust in government. A multi-level framework."
+  - title: "Transparency and trust in government. A multi-mechanism framework."
     authors: "Juan Pablo Ripamonti, Greg Porumbescu"
     venue: "🚧 In preparation"
     sourceLink: ""
@@ -27,24 +27,6 @@ papers:
     #year: "2023"
     selected: y
 
-  - title: "A Topic Modeling Analysis of Twitter Posts: Ten Years of Public Opinion on U.S. Institutions"
-    authors: "Juan Pablo Ripamonti"
-    venue: "🚧 In preparation"
-    sourceLink: ""
-    abstract: "Analysis of Twitter posts on the U.S. Congress, Supreme Court, and Executive Branch using BERTopic."
-    #year: "2023"
-    selected: y
-
-  - title: "The Influence of Transparency on Trust in Government. A Systematic Review of Empirical Research"
-    authors: "Juan Pablo Ripamonti"
-    venue: "🚧 In preparation"
-    #sourceLink: ""
-    #preprint: "https://arxiv.org/abs/2309.11029"
-    #data: "https://osf.io/n2b3s/?view_only=0ae0c8d5d110493d933ab76a633fedd6"
-    #prereg: "https://osf.io/n2b3s/?view_only=0ae0c8d5d110493d933ab76a633fedd6"
-    abstract: "Citizens’ trust in government is a fundamental prerequisite for good governance. There exists a debate on whether trust can be bolstered through government transparency or if transparency might actually diminish trust. In this article, I aim to reconcile these divergent theoretical stances by elucidating the primary pathways through which transparency can impact citizens’ trust. I undertake a systematic review of the empirical literature to ascertain our current understanding of these pathways. The review’s findings suggest that existing empirical research only addresses a subset of these pathways, and there is a lack of consensus among these studies on whether transparency fosters trust. Furthermore, the empirical literature largely neglects the potential variability in the effects of transparency on government trust across different social groups, which could result in a polarization of trust. These findings bear significant implications for practitioners aiming to enhance citizens’ trust and for scholars interested in the outcomes of transparency and the precursors of citizens’ trust."
-    #year: "2023"
-    selected: y
 
   - title: "3D Printing: A New Industrial Revolution?"
     authors: "Juan Pablo Ripamonti"
