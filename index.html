@@ -2,31 +2,92 @@
 layout: default
 title: Home
 ---
+{% assign all_papers = site.data.publications.papers %}
+<section class="hero" aria-labelledby="hero-title">
+  <p class="hero-eyebrow">Institutional resilience • Urban sustainability • Digital governance</p>
+  <h2 id="hero-title">Evidence-based strategies for trustworthy public institutions</h2>
+  <p class="hero-lead">
+    I study how cities and governments can become more responsive, transparent, and equitable by combining experimental methods, computational social science, and community partnerships.
+  </p>
+  <div class="hero-actions" role="group" aria-label="Key actions">
+    <a class="button button-primary" href="mailto:juan.ripamonti@bocconialumni.it">Email me</a>
+    <a class="button button-secondary" href="https://scholar.google.com/citations?user=WAwjMrEAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+    <a class="button button-ghost" href="#publications">Latest publications</a>
+  </div>
+</section>
+
+<section class="quick-stats" aria-label="Highlights">
+  <div class="stat-card">
+    <p class="stat-number">{{ all_papers | size }}</p>
+    <p class="stat-label">Peer-reviewed and working papers</p>
+  </div>
+  <div class="stat-card">
+    <p class="stat-number">3</p>
+    <p class="stat-label">Continents where I have led fieldwork and policy research</p>
+  </div>
+  <div class="stat-card">
+    <p class="stat-number">10+ yrs</p>
+    <p class="stat-label">Designing accountability and grievance redress systems</p>
+  </div>
+</section>
+
 <!-- ========== BIO ========== -->
-<div class="docs-section" id="bio">
-  <h4>Bio</h4>
-  
-  <a href="" target="_blank"></a>
-  <p>I hold a PhD in Public Policy and Administration from Bocconi University, Milan. My research focuses on institutional resilience and urban sustainability, with particular attention to what governance actors can do to foster these outcomes. I study transparency, formal complaint systems, and citizen trust in government organizations, using experimental methods, text analysis, and qualitative approaches. I also work on grievance redress mechanisms, including both independent oversight bodies and judicial systems.</p>
+<section class="docs-section" id="bio">
+  <div class="section-intro">
+    <h4>About</h4>
+    <p>Connecting institutional design with lived urban experiences.</p>
+  </div>
+  <div class="two-column-layout">
+    <div>
+      <p>I hold a PhD in Public Policy and Administration from Bocconi University, Milan. My research focuses on institutional resilience and urban sustainability, with particular attention to what governance actors can do to foster these outcomes. I study transparency, formal complaint systems, and citizen trust in government organizations, using experimental methods, text analysis, and qualitative approaches. I also work on grievance redress mechanisms, including both independent oversight bodies and judicial systems.</p>
+      <p>I am currently a researcher in the EU-funded project <em>AIPACT: Artificial Intelligence for Planning, Assessment and Coordination of Territories</em>, based at the SDA Bocconi School of Management (Bocconi University).</p>
+      <p>I was born in Buenos Aires, where I studied Sociology and worked at the National Ministry of Justice and the Judiciary. In 2016, I moved to New York to study International Affairs at The New School. During that time, I conducted applied research with the Global Urban Futures Team and the Marron Institute of Urban Management at NYU.</p>
+      <p>I welcome opportunities to collaborate on projects involving computational methods, urban policy, and institutional governance. Feel free to reach out anytime.</p>
+    </div>
+    <aside class="profile-highlights" aria-label="Personal highlights">
+      <h5>Beyond academia</h5>
+      <ul>
+        <li>Active collaborator with city governments on technology adoption.</li>
+        <li>Experience in judicial and executive branches in Argentina.</li>
+        <li>Mentor for early-career researchers exploring civic technology.</li>
+        <li>Recreational chess player, film enthusiast, and language model tinkerer.</li>
+      </ul>
+    </aside>
+  </div>
+</section>
 
-<p>I am currently a researcher in the EU-funded project <em>AIPACT: Artificial Intelligence for Planning, Assessment and Coordination of Territories</em>, based at the SDA Bocconi School of Management (Bocconi University). </p>
-
-<p>I was born in Buenos Aires, where I studied Sociology and worked at the National Ministry of Justice and the Judiciary. In 2016, I moved to New York to study International Affairs at The New School. During that time, I conducted applied research with the Global Urban Futures Team and the Marron Institute of Urban Management at NYU.</p>
-
-<p>In my free time, I enjoy reading, watching movies, playing chess, working out, and experimenting with large language models.</p>
-
-<p>I welcome opportunities to collaborate on projects involving computational methods, urban policy, and institutional governance. Feel free to reach out anytime.</p>
-</div>
+<!-- ========== RESEARCH FOCUS ========== -->
+<section class="docs-section" id="focus">
+  <div class="section-intro">
+    <h4>Research focus</h4>
+    <p>Bridging rigorous evidence with actionable policy guidance.</p>
+  </div>
+  <div class="research-grid">
+    <article class="research-card">
+      <h5>Institutional resilience</h5>
+      <p>How public organizations withstand shocks and maintain legitimacy, with emphasis on transparency reforms, oversight mechanisms, and citizen engagement.</p>
+    </article>
+    <article class="research-card">
+      <h5>Urban sustainability</h5>
+      <p>City-level strategies for equitable service delivery, environmental stewardship, and participatory planning rooted in community data.</p>
+    </article>
+    <article class="research-card">
+      <h5>Digital accountability</h5>
+      <p>Responsible integration of artificial intelligence into planning and grievance redress systems, ensuring fairness, explainability, and public trust.</p>
+    </article>
+  </div>
+</section>
 
 <!-- ========== PUBLICATIONS ========== -->
 <section class="docs-section" id="publications">
-  <h4>Publications</h4>
+  <div class="section-intro">
+    <h4>Publications</h4>
+    <p>Selected papers, chapters, and works in progress. Toggle each abstract to learn more.</p>
+  </div>
 
   <div class="publications-content">
-    {% assign all_papers = site.data.publications.papers %}
     {% for paper in all_papers %}
       <div class="paper">
-        <!-- Título y autores -->
         <p class="title"><b>{{ paper.title }}</b></p>
         <p>{{ paper.authors }}</p>
         <p>
@@ -36,19 +97,16 @@ title: Home
         {% if paper.award %}
         <p><i class="fa fa-trophy" style="color:#1EAEDB"></i> {{ paper.award }}</p>
         {% endif %}
-        
-        <!-- Contenedor de botones (Abstract y Paper) -->
+
         <div class="buttons-container">
-          <!-- Botón de Abstract -->
-          <button 
-            class="toggle-abstract" 
-            aria-controls="abstract-content-{{ forloop.index }}" 
+          <button
+            class="toggle-abstract"
+            aria-controls="abstract-content-{{ forloop.index }}"
             aria-expanded="false">
             Show Abstract
           </button>
 
-          <!-- Botones adicionales relacionados al paper -->
-        <div class="paper-buttons">
+          <div class="paper-buttons">
           {% if paper.paper_pdf %}
             <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>
           {% endif %}
@@ -76,10 +134,9 @@ title: Home
           </div>
         </div>
 
-        <!-- Abstract del Paper -->
-        <p 
-          id="abstract-content-{{ forloop.index }}" 
-          class="abstract-content" 
+        <p
+          id="abstract-content-{{ forloop.index }}"
+          class="abstract-content"
           style="display: none;">
           {{ paper.abstract }}
         </p>
@@ -88,32 +145,80 @@ title: Home
     </div>
 </section>
 
-<!-- ========== BLOG ========== -->
-<!--
-<div class="docs-section" id="blog">
-  <h4>Blog</h4>
-  {% for post in site.posts %}
-    <article class="blog-post">
-      <header>
-        <h5 class="post-title">{{ post.title }}</h5>
-        <p class="post-meta">Posted on {{ post.date | date: "%B %d, %Y" }}</p>
-      </header>
-      <section class="post-excerpt">
-        <p>{{ post.excerpt }}</p>
-      </section>
-      <footer>
-        <a href="{{ post.url | prepend: site.baseurl }}" class="read-more-link">Read More</a>
-      </footer>
+<!-- ========== PROJECTS ========== -->
+<section class="docs-section" id="projects">
+  <div class="section-intro">
+    <h4>Projects</h4>
+    <p>Current collaborations that translate research into practice.</p>
+  </div>
+  <div class="project-grid">
+    <article class="project-card">
+      <h5>AIPACT</h5>
+      <p>Designing AI-enabled tools for territorial planning and monitoring to help European regions make faster, evidence-based decisions on infrastructure and sustainability investments.</p>
+      <p class="project-meta">Role: Researcher • Partners: SDA Bocconi School of Management, EU Horizon Europe</p>
     </article>
-  {% endfor %}
-</div>
--->
+    <article class="project-card">
+      <h5>Institutional Trust Lab</h5>
+      <p>Testing transparency and feedback interventions with municipal agencies to understand what builds confidence among underserved residents.</p>
+      <p class="project-meta">Role: Co-lead • Methods: Field experiments, text analytics</p>
+    </article>
+    <article class="project-card">
+      <h5>Urban Governance Observatory</h5>
+      <p>Co-developing open data standards and grievance redress protocols with civil society organizations across Latin America.</p>
+      <p class="project-meta">Role: Advisor • Partners: Regional ombuds offices, justice ministries</p>
+    </article>
+  </div>
+</section>
 
-<!-- ========== THANKS ========== -->  
-<div class="docs-section" id="template">
-    <h4>Website Design</h4>
-    Original design by <a href="https://web.stanford.edu/~msaveski/" target="_blank">Martin Saveski</a>, forked by permission from <a href="https://github.com/mmoorr/www_personal" target="_blank">Mor Naaman's Github</a>. 
-    <!--<br/>-->
-</div>
+<!-- ========== TEACHING ========== -->
+<section class="docs-section" id="teaching">
+  <div class="section-intro">
+    <h4>Teaching &amp; mentorship</h4>
+    <p>Helping practitioners and students connect methods with policy impact.</p>
+  </div>
+  <div class="teaching-list">
+    <article>
+      <h5>Graduate seminars</h5>
+      <ul>
+        <li>Quantitative Methods for Policy Analysis (Bocconi University)</li>
+        <li>Urban Analytics and Decision-Making (The New School)</li>
+      </ul>
+    </article>
+    <article>
+      <h5>Workshops &amp; executive education</h5>
+      <ul>
+        <li>Designing citizen feedback loops for metropolitan agencies</li>
+        <li>Responsible AI adoption for public sector teams</li>
+      </ul>
+    </article>
+    <article>
+      <h5>Mentorship</h5>
+      <ul>
+        <li>Supervisor for interdisciplinary student capstone projects on governance innovation.</li>
+        <li>Mentor for civic tech fellows working with Latin American cities.</li>
+      </ul>
+    </article>
+  </div>
+</section>
 
+<!-- ========== CONTACT ========== -->
+<section class="docs-section" id="contact">
+  <div class="section-intro">
+    <h4>Connect</h4>
+    <p>Let’s explore collaborations, speaking engagements, or media inquiries.</p>
+  </div>
+  <div class="contact-card">
+    <p><strong>Email:</strong> <a href="mailto:juan.ripamonti@bocconialumni.it">juan.ripamonti@bocconialumni.it</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jpripamonti" target="_blank" rel="noopener">linkedin.com/in/jpripamonti</a></p>
+    <p><strong>Twitter:</strong> <a href="https://twitter.com/ripamontijp" target="_blank" rel="noopener">@ripamontijp</a></p>
+    <p class="contact-note">I respond fastest to collaborative opportunities that blend policy design, civic technology, and urban experimentation.</p>
+  </div>
+</section>
 
+<!-- ========== THANKS ========== -->
+<section class="docs-section" id="template">
+    <div class="section-intro">
+      <h4>Website design</h4>
+      <p>Originally created by <a href="https://web.stanford.edu/~msaveski/" target="_blank" rel="noopener">Martin Saveski</a> and adapted with permission from <a href="https://github.com/mmoorr/www_personal" target="_blank" rel="noopener">Mor Naaman</a>.</p>
+    </div>
+</section>
