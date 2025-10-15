@@ -1,0 +1,58 @@
+papers:
+
+  - title: "Does Informing about Government Transparency Boost Trust? Exploring an Overlooked Mechanism"
+    authors: "Juan Pablo Ripamonti"
+    venue: "📄 Government Information Quarterly"
+    #sourceLink: ""
+    paper_pdf: "https://www.sciencedirect.com/science/article/pii/S0740624X24000522"
+    abstract: | 
+      Governments implement transparency policies aiming to enhance citizens' trust, but the outcomes of these efforts are complex and not fully understood. Existing literature often focuses on how citizens consume government information, but tends to overlook the impact of the act of disclosure itself. This study seeks to fill this gap by examining citizens' responses to the act of government disclosure, independent of the content disclosed. Through a factorial survey experiment, the research manipulates motivations, types, and levels of information disclosure across two distinct organizations to assess their impact on public trust. The findings reveal that the act of disclosure generally enhances trust perceptions, but this effect is significantly modulated by individuals' pre-existing attitudes toward transparency. Those indifferent about transparency do not show increased trust, while for those who value transparency, trust increases notably. The study also finds that the disclosure of performance information, particularly when combined with financial information, has the most substantial impact on trust. Moreover, public trust is higher when organizations disclose more information than legally required. These results contribute to a more nuanced understanding of how government transparency influences public trust and highlight the importance of considering citizen attitudes in transparency initiatives.
+    year: "2024"
+    selected: y
+
+  - title: "Strategies for mediating downstream citizen voice into public policy and service ecosystems"
+    authors: "Rebecca Kirley, Juan Pablo Ripamonti, Maria Cucciniello"
+    venue: "🚧 Manuscript in final revision"
+    sourceLink: ""
+    abstract: "Governments increasingly seek citizen voice to enhance accountability and service quality, yet how unstructured inputs like complaints shape policy remains unclear. This study examines ombuds institutions as mediators of citizen voice across Italy, the UK, and Argentina. Through qualitative analysis of documents and 25 interviews, it identifies two ideal-type mediation strategies—facilitative–collectivizing and authoritative–bilateral—used to navigate fragmented and complex service ecosystems. The study introduces the concept of citizen voice mediation and offers a framework for understanding how citizen input can drive change in democratic governance."
+    selected: y
+
+  - title: "Transparency and trust in government. A multi-mechanism framework."
+    authors: "Juan Pablo Ripamonti, Greg Porumbescu"
+    venue: "🚧 Manuscript in final revision"
+    sourceLink: ""
+    abstract: "Transparency is often assumed to enhance public trust in government, yet empirical evidence remains mixed and theory fragmented. This article proposes an integrated framework explaining how transparency influences trust through three mechanisms: disclosure-based (making information public), information-based (citizens’ engagement with disclosed content), and behavior-based (organizational changes induced by transparency). Drawing on attribution and signaling theories, the framework clarifies causal pathways, boundary conditions, and contextual moderators for each mechanism. It distinguishes between trust and trustworthiness, showing how transparency can affect one without necessarily altering the other. The framework also specifies how these mechanisms operate at individual, organizational, and institutional levels, and how their interactions can reinforce, offset, or reverse effects over time. A case study of school performance disclosure in the Netherlands illustrates how these mechanisms unfold sequentially, shape perceptions through attribution cues, and generate heterogeneous impacts across audiences and contexts. The framework advances theoretical integration, offers testable propositions for empirical research, and provides practical guidance for designing transparency initiatives that foster trust."
+    #preprint: ""
+    #prereg: ""
+    #year: ""
+    selected: y
+
+  - title: "Political Change and Administrative Accountability: Evidence from Argentina’s Federal Administrative Courts (2014–2024)"
+    authors: "Juan Pablo Ripamonti"
+    venue: "🔬 Data analysis in progress"
+    sourceLink: ""
+    abstract: "This project analyzes how citizens’ legal challenges to public administration evolve across political cycles in Argentina. Using the complete set of appellate decisions from the Federal Administrative Courts between 2014 and 2024, it applies large language models (LLMs) to identify the main policy areas in which citizens litigate against the state and to track how judicial outcomes on these issues change over time. The study examines whether shifts in executive leadership affect the likelihood of rulings favorable to citizens or the administration, and what institutional factors strengthen or weaken judicial autonomy. The project provides empirical evidence on the dynamics of administrative accountability and the conditions under which courts maintain independence from the executive."
+    selected: y
+
+  - title: "Representation, Leadership, and Discretion in the NYPD"
+    authors: "Juan Pablo Ripamonti"
+    venue: "🔬 Data analysis in progress"
+    sourceLink: ""
+    abstract: "This project examines how leadership diversity shapes discretionary behavior in public organizations. Using data from the New York Police Department between 2003 and 2024, it analyzes whether the race and gender of precinct commanders influence officers’ use of stop-and-frisk practices. The study explores how representative leadership affects accountability and organizational culture, contributing to research on the mechanisms through which diversity at higher levels of the bureaucracy influences behavior at the street level."
+    selected: y
+
+
+  - title: "3D Printing: A New Industrial Revolution?"
+    authors: "Juan Pablo Ripamonti"
+    venue: "📚 In: Kléber Ghimire (ed.), Future Courses of Human Societies: Critical Reflections from the Natural and Social Sciences. Routledge"
+    sourceLink: "https://www.pnas.org"
+    #preprint: ""
+    #data: ""
+    #prereg: ""
+    #paper_pdf: ""
+    abstract: "This chapter examines the transformative potential of additive manufacturing (AM), or 3D printing, as a catalyst for a new industrial revolution. It contrasts AM with the traditional factory system, discussing how AM could decentralize production and enable mass customization. By presenting two scenarios, the chapter explores the economic and social impacts of widespread AM adoption, including shifts in labor markets, challenges to global supply chains, and issues surrounding intellectual property in a digital world. The discussion concludes by considering the broader implications of AM, highlighting its potential to democratize production and reduce waste while raising critical questions about economic stability and the future of work."
+    year: "2018"
+    selected: y
+
+
+

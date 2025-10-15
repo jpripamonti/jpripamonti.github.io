@@ -1,0 +1,119 @@
+---
+layout: default
+title: Home
+---
+<!-- ========== BIO ========== -->
+<div class="docs-section" id="bio">
+  <h4>Bio</h4>
+  
+  <a href="" target="_blank"></a>
+  <p>I am currently a researcher in the EU-funded project <em>AIPACT: Artificial Intelligence for Planning, Assessment and Coordination of Territories</em>, based at the SDA Bocconi School of Management (Bocconi University). </p>
+  
+  <p>I hold a PhD in Public Policy and Administration from Bocconi University, Milan. My research focuses on how governance actors influence the legitimacy of democratic institutions through their policies and practices. I study transparency, formal complaint systems, and citizen trust in government organizations, using experimental methods, text analysis, and qualitative approaches.</p>
+
+<p>I was born in Buenos Aires, where I studied Sociology and worked at the National Ministry of Justice and the Judiciary. In 2016, I moved to New York to study International Affairs at The New School. During that time, I conducted applied research with the Global Urban Futures Team and the Marron Institute of Urban Management at NYU.</p>
+
+<p>In my free time, I enjoy reading, watching movies, playing chess, working out, and experimenting with large language models.</p>
+
+<p>I welcome opportunities to collaborate on projects involving computational methods. Feel free to reach out anytime.</p>
+</div>
+
+<!-- ========== PUBLICATIONS ========== -->
+<section class="docs-section" id="publications">
+  <h4>Publications</h4>
+
+  <div class="publications-content">
+    {% assign all_papers = site.data.publications.papers %}
+    {% for paper in all_papers %}
+      <div class="paper">
+        <!-- Título y autores -->
+        <p class="title"><b>{{ paper.title }}</b></p>
+        <p>{{ paper.authors }}</p>
+        <p>
+          <i>{{ paper.venue }}</i>
+          {% if paper.year %}. {{ paper.year }}.{% endif %}
+        </p>
+        {% if paper.award %}
+        <p><i class="fa fa-trophy" style="color:#1EAEDB"></i> {{ paper.award }}</p>
+        {% endif %}
+        
+        <!-- Contenedor de botones (Abstract y Paper) -->
+        <div class="buttons-container">
+          <!-- Botón de Abstract -->
+          <button 
+            class="toggle-abstract" 
+            aria-controls="abstract-content-{{ forloop.index }}" 
+            aria-expanded="false">
+            Show Abstract
+          </button>
+
+          <!-- Botones adicionales relacionados al paper -->
+        <div class="paper-buttons">
+          {% if paper.paper_pdf %}
+            <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>
+          {% endif %}
+          {% if paper.preprint %}
+            <a class="button" href="{{ paper.preprint }}" target="_blank">Preprint</a>
+          {% endif %}
+          {% if paper.code %}
+            <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+          {% endif %}
+          {% if paper.data %}
+            <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
+          {% endif %}
+          {% if paper.prereg %}
+            <a class="button" href="{{ paper.prereg }}" target="_blank">Registration</a>
+          {% endif %}
+          {% if paper.slides %}
+            <a class="button" href="{{ paper.slides }}" target="_blank">Slides</a>
+          {% endif %}
+          {% if paper.poster %}
+            <a class="button" href="{{ paper.poster }}" target="_blank">Poster</a>
+          {% endif %}
+          {% if paper.video %}
+            <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+          {% endif %}
+          </div>
+        </div>
+
+        <!-- Abstract del Paper -->
+        <p 
+          id="abstract-content-{{ forloop.index }}" 
+          class="abstract-content" 
+          style="display: none;">
+          {{ paper.abstract }}
+        </p>
+        </div>
+      {% endfor %}
+    </div>
+</section>
+
+<!-- ========== BLOG ========== -->
+<!--
+<div class="docs-section" id="blog">
+  <h4>Blog</h4>
+  {% for post in site.posts %}
+    <article class="blog-post">
+      <header>
+        <h5 class="post-title">{{ post.title }}</h5>
+        <p class="post-meta">Posted on {{ post.date | date: "%B %d, %Y" }}</p>
+      </header>
+      <section class="post-excerpt">
+        <p>{{ post.excerpt }}</p>
+      </section>
+      <footer>
+        <a href="{{ post.url | prepend: site.baseurl }}" class="read-more-link">Read More</a>
+      </footer>
+    </article>
+  {% endfor %}
+</div>
+-->
+
+<!-- ========== THANKS ========== -->  
+<div class="docs-section" id="template" style="font-size: 10px;">
+    <h5 style="font-size: 12px;">Website Design</h5>
+    Original design by <a href="https://web.stanford.edu/~msaveski/" target="_blank">Martin Saveski</a>, forked by permission from <a href="https://github.com/mmoorr/www_personal" target="_blank">Mor Naaman's Github</a>. 
+    <!--<br/>-->
+</div>
+
+

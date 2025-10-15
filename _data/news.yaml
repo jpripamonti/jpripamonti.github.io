@@ -1,0 +1,21 @@
+news_items:
+  - item: "Paper Published"
+    date: "August 2024"
+    link: "https://www.sciencedirect.com/science/article/pii/S0740624X24000522"
+
+  - item: "Presented a paper and co-presented a poster with Dr. Kirley at the 8th GTRC in Brussels."
+    date: "May 2024"
+    #link: "https://www.pnas.org/doi/10.1073/pnas.2208839120"
+
+  - item: "Succesfully defended PhD dissertation"
+    date: "January 2024"
+    #link: "https://www.pnas.org/doi/10.1073/pnas.2208839120"
+
+  - item: "Presented the conference paper 'Measuring Trust in Government Using Social Media Data' at PMRC 2023 in Utrecht, The Netherlands."
+    date: "Jun 2023"
+    #link: ""
+
+  - item: "Presented the conference paper 'The Influence of Transparency on Trust in Government: A Systematic Literature Review' at the 7th GTRC in Copenhagen, Denmark."
+    date: "May 2022"
+    #link: ""
+
