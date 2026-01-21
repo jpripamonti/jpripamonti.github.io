@@ -5,7 +5,8 @@ papers:
     venue: "📄 Government Information Quarterly"
     #sourceLink: ""
     paper_pdf: "https://www.sciencedirect.com/science/article/pii/S0740624X24000522"
-    abstract: |"Governments implement transparency policies aiming to enhance citizens' trust, but the outcomes of these efforts are complex and not fully understood. Existing literature often focuses on how citizens consume government information, but tends to overlook the impact of the act of disclosure itself. This study seeks to fill this gap by examining citizens' responses to the act of government disclosure, independent of the content disclosed. Through a factorial survey experiment, the research manipulates motivations, types, and levels of information disclosure across two distinct organizations to assess their impact on public trust. The findings reveal that the act of disclosure generally enhances trust perceptions, but this effect is significantly modulated by individuals' pre-existing attitudes toward transparency. Those indifferent about transparency do not show increased trust, while for those who value transparency, trust increases notably. The study also finds that the disclosure of performance information, particularly when combined with financial information, has the most substantial impact on trust. Moreover, public trust is higher when organizations disclose more information than legally required. These results contribute to a more nuanced understanding of how government transparency influences public trust and highlight the importance of considering citizen attitudes in transparency initiatives."
+    abstract: |
+      Governments implement transparency policies aiming to enhance citizens' trust, but the outcomes of these efforts are complex and not fully understood. Existing literature often focuses on how citizens consume government information, but tends to overlook the impact of the act of disclosure itself. This study seeks to fill this gap by examining citizens' responses to the act of government disclosure, independent of the content disclosed. Through a factorial survey experiment, the research manipulates motivations, types, and levels of information disclosure across two distinct organizations to assess their impact on public trust. The findings reveal that the act of disclosure generally enhances trust perceptions, but this effect is significantly modulated by individuals' pre-existing attitudes toward transparency. Those indifferent about transparency do not show increased trust, while for those who value transparency, trust increases notably. The study also finds that the disclosure of performance information, particularly when combined with financial information, has the most substantial impact on trust. Moreover, public trust is higher when organizations disclose more information than legally required. These results contribute to a more nuanced understanding of how government transparency influences public trust and highlight the importance of considering citizen attitudes in transparency initiatives.
     year: "2024"
     selected: y
 
@@ -19,7 +20,7 @@ papers:
     #year: ""
     selected: y
 
-- title: "Strategies for mediating downstream citizen voice into public policy and service ecosystems - what, how and why?"
+  - title: "Strategies for mediating downstream citizen voice into public policy and service ecosystems - what, how and why?"
     authors: "Rebecca Kirley, Juan Pablo Ripamonti, Maria Cucciniello"
     venue: "🚧 Manuscript in final revision"
     sourceLink: ""
@@ -52,6 +53,5 @@ papers:
     abstract: "This chapter examines the transformative potential of additive manufacturing (AM), or 3D printing, as a catalyst for a new industrial revolution. It contrasts AM with the traditional factory system, discussing how AM could decentralize production and enable mass customization. By presenting two scenarios, the chapter explores the economic and social impacts of widespread AM adoption, including shifts in labor markets, challenges to global supply chains, and issues surrounding intellectual property in a digital world. The discussion concludes by considering the broader implications of AM, highlighting its potential to democratize production and reduce waste while raising critical questions about economic stability and the future of work."
     year: "2018"
     selected: y
-
 
 
