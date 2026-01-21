@@ -5,47 +5,46 @@ papers:
     venue: "📄 Government Information Quarterly"
     #sourceLink: ""
     paper_pdf: "https://www.sciencedirect.com/science/article/pii/S0740624X24000522"
-    abstract: | 
-      Governments implement transparency policies aiming to enhance citizens' trust, but the outcomes of these efforts are complex and not fully understood. Existing literature often focuses on how citizens consume government information, but tends to overlook the impact of the act of disclosure itself. This study seeks to fill this gap by examining citizens' responses to the act of government disclosure, independent of the content disclosed. Through a factorial survey experiment, the research manipulates motivations, types, and levels of information disclosure across two distinct organizations to assess their impact on public trust. The findings reveal that the act of disclosure generally enhances trust perceptions, but this effect is significantly modulated by individuals' pre-existing attitudes toward transparency. Those indifferent about transparency do not show increased trust, while for those who value transparency, trust increases notably. The study also finds that the disclosure of performance information, particularly when combined with financial information, has the most substantial impact on trust. Moreover, public trust is higher when organizations disclose more information than legally required. These results contribute to a more nuanced understanding of how government transparency influences public trust and highlight the importance of considering citizen attitudes in transparency initiatives.
+    abstract: |"Governments implement transparency policies aiming to enhance citizens' trust, but the outcomes of these efforts are complex and not fully understood. Existing literature often focuses on how citizens consume government information, but tends to overlook the impact of the act of disclosure itself. This study seeks to fill this gap by examining citizens' responses to the act of government disclosure, independent of the content disclosed. Through a factorial survey experiment, the research manipulates motivations, types, and levels of information disclosure across two distinct organizations to assess their impact on public trust. The findings reveal that the act of disclosure generally enhances trust perceptions, but this effect is significantly modulated by individuals' pre-existing attitudes toward transparency. Those indifferent about transparency do not show increased trust, while for those who value transparency, trust increases notably. The study also finds that the disclosure of performance information, particularly when combined with financial information, has the most substantial impact on trust. Moreover, public trust is higher when organizations disclose more information than legally required. These results contribute to a more nuanced understanding of how government transparency influences public trust and highlight the importance of considering citizen attitudes in transparency initiatives."
     year: "2024"
     selected: y
 
-  - title: "Strategies for mediating downstream citizen voice into public policy and service ecosystems"
-    authors: "Rebecca Kirley, Juan Pablo Ripamonti, Maria Cucciniello"
-    venue: "🚧 Manuscript in final revision"
+  - title: "How Transparency Influences Trust in Government: A Multi-Mechanism Framework."
+    authors: "Juan Pablo Ripamonti, Greg Porumbescu, Greta Nasi"
+    venue: "📨 Manuscript submitted for publication"
     sourceLink: ""
-    abstract: "Governments increasingly seek citizen voice to enhance accountability and service quality, yet how unstructured inputs like complaints shape policy remains unclear. This study examines ombuds institutions as mediators of citizen voice across Italy, the UK, and Argentina. Through qualitative analysis of documents and 25 interviews, it identifies two ideal-type mediation strategies—facilitative–collectivizing and authoritative–bilateral—used to navigate fragmented and complex service ecosystems. The study introduces the concept of citizen voice mediation and offers a framework for understanding how citizen input can drive change in democratic governance."
-    selected: y
-
-  - title: "Transparency and trust in government. A multi-mechanism framework."
-    authors: "Juan Pablo Ripamonti, Greg Porumbescu"
-    venue: "🚧 Manuscript in final revision"
-    sourceLink: ""
-    abstract: "Transparency is often assumed to enhance public trust in government, yet empirical evidence remains mixed and theory fragmented. This article proposes an integrated framework explaining how transparency influences trust through three mechanisms: disclosure-based (making information public), information-based (citizens’ engagement with disclosed content), and behavior-based (organizational changes induced by transparency). Drawing on attribution and signaling theories, the framework clarifies causal pathways, boundary conditions, and contextual moderators for each mechanism. It distinguishes between trust and trustworthiness, showing how transparency can affect one without necessarily altering the other. The framework also specifies how these mechanisms operate at individual, organizational, and institutional levels, and how their interactions can reinforce, offset, or reverse effects over time. A case study of school performance disclosure in the Netherlands illustrates how these mechanisms unfold sequentially, shape perceptions through attribution cues, and generate heterogeneous impacts across audiences and contexts. The framework advances theoretical integration, offers testable propositions for empirical research, and provides practical guidance for designing transparency initiatives that foster trust."
+    abstract: "While the relationship between transparency and trust in government is increasingly recognized as complex, existing theories offer fragmented accounts that focus on different aspects of the relationship. As a result, we lack clear explanations for divergent empirical findings and for when transparency affects trust. We address this gap by developing an integrative framework grounded in citizens’ attribution processes. We argue that transparency shapes trust in public organizations by providing cues that citizens use to infer whether an organization has the capacity and orientation to meet expectations. Such cues may arise from disclosure itself, from citizens’ engagement with disclosed information directly or via intermediaries, and from organizational behavioral and performance changes induced by transparency arrangements. We label these pathways disclosure-, information-, and behavior-based mechanisms, and specify key conditions and contextual moderators under which they influence trust. We illustrate the framework using hypothetical scenarios involving police body-worn cameras and hospital performance reporting, and discuss implications for research and the design of transparency initiatives."
     #preprint: ""
     #prereg: ""
     #year: ""
     selected: y
 
-  - title: "Political Change and Administrative Accountability: Evidence from Argentina’s Federal Administrative Courts (2014–2024)"
+- title: "Strategies for mediating downstream citizen voice into public policy and service ecosystems - what, how and why?"
+    authors: "Rebecca Kirley, Juan Pablo Ripamonti, Maria Cucciniello"
+    venue: "🚧 Manuscript in final revision"
+    sourceLink: ""
+    abstract: "Citizen voice is solicited in government to hold providers accountable, advance democratic values, and improve service delivery. Downstream citizen voice, such as complaints, can reveal pressure points, diverse needs, and failures in complex service ecosystems. However, theory and evidence on how noisy, unstructured citizen voice is mediated into policy and service arenas remain limited. Addressing this gap, this project looks to ombud institutions and related actors, which span citizen–state boundaries and policy networks. We use a qualitative approach to elaborate the concept of citizen voice mediation and to explore what strategies ombuds use to mediate downstream voice, and what drives these choices. Findings from interpretivist analysis of documents and interviews in Italy, the UK, and Argentina identify three outward mediation repertoires—authoritative‑targeted, facilitative‑collectivizing, and making information accessible and meaningful—expressed through directive (AR), hybrid (IT), and curatorial (UK) profiles. These strategies are shaped by different forms of ecosystemic fragmentation and actor capacities. The study advances a novel theorization of citizen voice mediation, develops positive propositions for testing, and deepens understanding of how voice can be strategically mediated to foster change in complex policy and service ecosystems."
+    selected: y
+
+  - title: "Political Change and Administrative Accountability: Evidence from Argentina’s Federal Administrative Courts (2014–2025)"
     authors: "Juan Pablo Ripamonti"
     venue: "🔬 Data analysis in progress"
     sourceLink: ""
-    abstract: "This project analyzes how citizens’ legal challenges to public administration evolve across political cycles in Argentina. Using the complete set of appellate decisions from the Federal Administrative Courts between 2014 and 2024, it applies large language models (LLMs) to identify the main policy areas in which citizens litigate against the state and to track how judicial outcomes on these issues change over time. The study examines whether shifts in executive leadership affect the likelihood of rulings favorable to citizens or the administration, and what institutional factors strengthen or weaken judicial autonomy. The project provides empirical evidence on the dynamics of administrative accountability and the conditions under which courts maintain independence from the executive."
+    abstract: "This project analyzes how citizens’ legal challenges to public administration evolve across political cycles in Argentina. Using the complete set of appellate decisions from the Federal Administrative Courts between 2014 and 2025, it applies large language models (LLMs) to identify the main policy areas in which citizens litigate against the state and to track how judicial outcomes on these issues change over time. The study examines whether shifts in executive leadership affect the likelihood of rulings favorable to citizens or the administration, and what institutional factors strengthen or weaken judicial autonomy. The project aims to provide empirical evidence on the dynamics of administrative accountability and the conditions under which courts maintain independence from the executive."
     selected: y
 
   - title: "Representation, Leadership, and Discretion in the NYPD"
     authors: "Juan Pablo Ripamonti"
     venue: "🔬 Data analysis in progress"
     sourceLink: ""
-    abstract: "This project examines how leadership diversity shapes discretionary behavior in public organizations. Using data from the New York Police Department between 2003 and 2024, it analyzes whether the race and gender of precinct commanders influence officers’ use of stop-and-frisk practices. The study explores how representative leadership affects accountability and organizational culture, contributing to research on the mechanisms through which diversity at higher levels of the bureaucracy influences behavior at the street level."
+    abstract: "This project examines how leadership diversity shapes discretionary behavior in public organizations. Using data from the New York Police Department between 2003 and 2025, it analyzes whether the race and gender of precinct commanders influence officers’ use of stop-and-frisk practices. The study explores how representative leadership affects accountability and organizational culture, contributing to research on the mechanisms through which diversity at higher levels of the bureaucracy influences behavior at the street level."
     selected: y
 
 
   - title: "3D Printing: A New Industrial Revolution?"
     authors: "Juan Pablo Ripamonti"
     venue: "📚 In: Kléber Ghimire (ed.), Future Courses of Human Societies: Critical Reflections from the Natural and Social Sciences. Routledge"
-    sourceLink: "https://www.pnas.org"
+    sourceLink: ""
     #preprint: ""
     #data: ""
     #prereg: ""
