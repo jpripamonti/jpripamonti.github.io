@@ -15,6 +15,13 @@
     margin-bottom: 60px; 
     text-align: left;
   }
+
+  .header .profile-photo {
+    width: 55% !important;
+    max-width: 150px !important;
+    height: auto;
+    display: block;
+  }
   
   .main-description h1,
   .main-description p {
