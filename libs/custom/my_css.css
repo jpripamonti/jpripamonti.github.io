@@ -1,0 +1,281 @@
+/* =======================
+   General Styles
+   ======================= */
+
+   h4 {
+    letter-spacing: 0.1rem;
+  }
+  
+  .container {
+    max-width: 800px;
+  }
+  
+  .header {
+    margin-top: 60px;
+    margin-bottom: 60px; 
+    text-align: left;
+  }
+  
+  .main-description h1,
+  .main-description p {
+    margin-bottom: 0;
+  }
+  
+  .main-description .fa {
+    font-size: 22px;
+    margin-top: 5px;
+  }
+  
+  /* =======================
+     Paper Section
+     ======================= */
+  
+  .paper {
+    margin-bottom: 10px;
+  }
+  
+  .paper .title {
+    text-transform: uppercase; /* Uncomment if needed */
+  }
+  
+  .paper p {
+    margin-bottom: 2px;
+  }
+  
+  .paper .button {
+    display: inline-block; /* Asegura que ambos se comporten igual */
+    height: 35px; /* Mismo tamaño */
+    padding: 0 25px; /* Mismo padding */
+    font-weight: 600; /* Mismo peso de fuente */
+    line-height: 35px; /* Alineación vertical del texto */
+    text-transform: none; /* Sin transformación de texto */
+    background-color: white; /* Mismo color de fondo */
+    color: black; /* Mismo color de texto */
+    border: 1px solid black; /* Sin bordes adicionales */
+    border-radius: 3px; /* Bordes redondeados iguales */
+    cursor: pointer; /* Indicador de interacción */
+    text-decoration: none; /* Sin subrayado */
+  }
+  
+  .paper .button:hover {
+    background-color: #00478A; /* Mismo color en hover */
+  }
+  
+  /* =======================
+     Buttons and Abstracts
+     ======================= */
+  
+  .buttons-container {
+    display: flex; /* Alinea los botones horizontalmente */
+    align-items: center; /* Asegura que todos estén centrados verticalmente */
+    gap: 10px; /* Espacio uniforme entre los botones */
+    margin-bottom: 10px; /* Espacio inferior */
+  }
+  
+  .toggle-abstract, .button {
+    display: inline-block;
+    height: 35px; /* Mismo tamaño para ambos */
+    padding: 0 25px; /* Mismo padding para ambos */
+    font-weight: 600;
+    line-height: 35px; /* Centra el texto verticalmente */
+    text-transform: none;
+    background-color: white; /* Consistencia en colores */
+    color: black;
+    border: 1px solid black; /* Borde del mismo color que el texto */
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .toggle-abstract:hover, .button:hover {
+    background-color: #00478A;
+    color: white;
+  }
+  
+  /* =======================
+     Section Headers
+     ======================= */
+  
+  .section-header {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+  }
+  
+  .docs-section {
+    border-top: 1px solid #999;
+    padding: 4rem 0;
+    margin-bottom: 0;
+  }
+  
+  /* =======================
+     Footer
+     ======================= */
+  
+  .footer {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.4);
+    border-top: 1px solid #eee;
+    padding: 15px 0 40px 0;
+    margin-bottom: 0;
+  }
+  
+  /* =======================
+     Navbar
+     ======================= */
+  
+  .navbar {
+    display: none;
+  }
+  
+  .navbar-list {
+    list-style: none;
+    margin-bottom: 0;
+  }
+  
+  .navbar-link {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    margin-right: 35px;
+    text-decoration: none;
+    line-height: 6.5rem;
+    color: #222;
+  }
+  
+  .navbar-link.active {
+    color: #00478A;
+  }
+  
+  /* =======================
+     Images and Titles
+     ======================= */
+  
+  .title-subtitle h3 {
+    margin-bottom: 0;
+  }
+  
+  .title-subtitle h5 {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .image {
+    text-align: center;
+  }
+  
+  /* =======================
+     Media Queries
+     ======================= */
+  
+  /* Larger than phone */
+  @media (min-width: 550px) {
+    .header {
+      margin-top: 5rem;
+    }
+  }
+  
+  /* Larger than tablet */
+  @media (min-width: 750px) {
+    .navbar + .docs-section {
+      border-top-width: 0;
+    }
+  
+    .navbar,
+    .navbar-spacer {
+      display: block;
+      width: 100%;
+      height: 6.5rem;
+      background: #fff;
+      z-index: 99;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
+  
+    .navbar-spacer {
+      display: none;
+    }
+  
+    .navbar > .container {
+      width: 100%;
+    }
+  
+    .navbar-item {
+      position: relative;
+      float: left;
+      margin-bottom: 0;
+    }
+  }
+  
+  /* =======================
+     Popover Styles
+     ======================= */
+  
+  .popover.open {
+    display: block;
+  }
+  
+  .popover {
+    display: none;
+    position: absolute;
+    top: 92%;
+    left: -50%;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    -webkit-filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.1));
+    -moz-filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.1));
+  }
+  
+  /* =======================
+     Blog Post Styles
+     ======================= */
+  
+  .post-excerpt p {
+    margin-bottom: 5px; /* Reduces bottom margin of paragraph inside post excerpt */
+  }
+  
+  .blog-post footer {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  
+  .read-more-link {
+    display: inline-block;
+    margin-top: 0;
+    font-size: medium;
+    color: #00478A;
+    text-decoration: none;
+  }
+  
+  .blog-post-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .post-header h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .post-meta {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    color: #999;
+    margin-bottom: 2rem;
+  }
+  
+  .post-content {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 2rem;
+  }
