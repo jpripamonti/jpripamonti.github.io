@@ -16,11 +16,31 @@
     text-align: left;
   }
 
+  .profile-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .header .profile-photo {
-    width: 55% !important;
+    width: 61% !important;
     max-width: 150px !important;
     height: auto;
     display: block;
+  }
+
+  .profile-social-icons {
+    margin: 8px 0 0 0;
+  }
+
+  .profile-social-icons span {
+    display: inline-block;
+    margin-right: 12px;
+  }
+
+  .profile-social-icons .fa,
+  .profile-social-icons .ai {
+    font-size: 22px;
   }
   
   .main-description h1,
