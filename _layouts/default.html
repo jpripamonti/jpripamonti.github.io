@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include google_analytics.html %}
+  <meta charset="utf-8">
+  <title>{{ site.data.main_info.name }} | {{ page.title }}</title>
+  <meta name="description" content="Homepage for Juan Pablo Ripamonti, researcher in public policy, transparency, and democratic trust.">
+  <meta name="author" content="Juan Pablo Ripamonti">
+  <meta property="og:title" content="{{ site.data.main_info.name }} | {{ page.title }}">
+  <meta property="og:description" content="Research in transparency, complaint systems, and citizen trust in government organizations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jpripamonti.github.io">
+  <meta property="og:site_name" content="{{ site.data.main_info.name }}">
+  <link rel="canonical" href="https://jpripamonti.github.io">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ '/assets/css/syntax.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/libs/external/skeleton/normalize.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/libs/external/skeleton/skeleton.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/libs/custom/my_css.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/libs/external/font-awesome-4.7.0/css/font-awesome.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/libs/external/academicons-1.8.6/css/academicons.min.css' | relative_url }}">
+
+  <script src="{{ '/libs/external/jquery-3.1.1.min.js' | relative_url }}"></script>
+  <script src="{{ '/libs/custom/my_js.js' | relative_url }}"></script>
+
+  <link rel="icon" type="image/png" href="{{ '/libs/icon.jpeg' | relative_url }}">
+  <link rel="shortcut icon" type="image/png" href="{{ '/libs/icon.jpeg' | relative_url }}">
+
+  {% if site.data.main_info.mastodon %}
+  <link href="{{ site.data.main_info.mastodon }}" rel="me">
+  {% endif %}
+</head>
+<body class="{% if page.title == 'Home' %}page-home{% else %}page-inner{% endif %}">
+  <div class="site-shell">
+    {% if page.title == 'Home' %}
+    <header class="site-header" id="top">
+      <div class="masthead">
+        <div class="masthead-side">
+          <div class="masthead-photo">
+            <img class="profile-photo" src="{{ site.data.main_info.profile_pic | relative_url }}" alt="Portrait of {{ site.data.main_info.name }}" loading="lazy">
+          </div>
+          <div class="masthead-meta">
+            <p class="site-subtitle">{{ site.data.main_info.title }}</p>
+            <p class="site-email">{{ site.data.main_info.email }}</p>
+            <div class="site-links" aria-label="External links">
+              {% if site.data.main_info.linkedin %}
+              <a href="{{ site.data.main_info.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              {% endif %}
+              {% if site.data.main_info.github %}
+              <a href="{{ site.data.main_info.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+                <i class="fa fa-github" aria-hidden="true"></i>
+              </a>
+              {% endif %}
+              {% if site.data.main_info.google_scholar %}
+              <a href="{{ site.data.main_info.google_scholar }}" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar">
+                <i class="ai ai-google-scholar-square" aria-hidden="true"></i>
+              </a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        <div class="masthead-main">
+          <h1 class="site-title">{{ site.data.main_info.name }}</h1>
+          <p class="site-summary">My research focuses on how governance actors influence the legitimacy of democratic institutions through their policies and practices. I study transparency, formal complaint systems, and citizen trust in government organizations.</p>
+        </div>
+      </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Section navigation">
+      <a class="site-nav-link" data-section-link href="#bio">Bio</a>
+      <a class="site-nav-link" data-section-link href="#publications">Publications</a>
+    </nav>
+    {% else %}
+    <header class="inner-header">
+      <a class="inner-header-home" href="{{ '/' | relative_url }}">{{ site.data.main_info.name }}</a>
+      <p class="inner-header-title">{{ page.title }}</p>
+    </header>
+    {% endif %}
+
+    <main class="page-content">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <p>{{ site.data.main_info.email }}</p>
+    </footer>
+  </div>
+
+  <span id="62cd7b7da1aff3196fdc26b60e396df9"></span>
+  <script src="{{ '/assets/js/enhanced-tracking.js' | relative_url }}"></script>
+</body>
+</html>

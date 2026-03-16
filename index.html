@@ -1,0 +1,76 @@
+---
+layout: default
+title: Home
+---
+<section class="content-section" id="bio" data-section>
+  <div class="section-header">
+    <h2>Bio</h2>
+  </div>
+  <div class="section-content prose">
+    <p class="lead-paragraph">I am currently a researcher in the EU-funded project <em>AIPACT: Artificial Intelligence for Planning, Assessment and Coordination of Territories</em>, based at the SDA Bocconi School of Management (Bocconi University).</p>
+
+    <p>I hold a PhD in Public Policy and Administration from Bocconi University, Milan. My research focuses on how governance actors influence the legitimacy of democratic institutions through their policies and practices. I study transparency, formal complaint systems, and citizen trust in government organizations, using experimental methods, text analysis, and qualitative approaches.</p>
+
+    <p>I was born in Buenos Aires, where I studied Sociology and worked at the National Ministry of Justice and the Judiciary. In 2016, I moved to New York to study International Affairs at The New School. During that time, I conducted applied research with the Global Urban Futures Team and the Marron Institute of Urban Management at NYU.</p>
+
+    <p>In my free time, I enjoy reading, watching movies, playing chess, working out, and experimenting with large language models. Recently, this has taken the form of building, with tools like Claude Code and OpenAI Codex, an <a href="https://jpripamonti.github.io/ludus_scaccorum/" target="_blank" rel="noopener noreferrer">online game</a> to help people improve at chess and an enhanced search interface for job listings on the EURAXESS platform.</p>
+  </div>
+</section>
+
+<section class="content-section" id="publications" data-section>
+  <div class="section-header">
+    <h2>Publications</h2>
+  </div>
+  <div class="section-content">
+    <div class="publications-list">
+      {% assign all_papers = site.data.publications.papers %}
+      {% for paper in all_papers %}
+      <article class="publication">
+        <h3 class="publication-title">{{ paper.title }}</h3>
+        <p class="publication-authors">{{ paper.authors }}</p>
+        <p class="publication-venue">
+          <span>{{ paper.venue }}</span>
+          {% if paper.year %}
+          <span>{{ paper.year }}</span>
+          {% endif %}
+        </p>
+        {% if paper.award %}
+        <p class="publication-award"><i class="fa fa-trophy" aria-hidden="true"></i> {{ paper.award }}</p>
+        {% endif %}
+
+        <div class="publication-links">
+          <button class="toggle-abstract" type="button" aria-controls="abstract-content-{{ forloop.index }}" aria-expanded="false">Show abstract</button>
+          {% if paper.paper_pdf %}
+          <a class="publication-link" href="{{ paper.paper_pdf }}" target="_blank" rel="noopener noreferrer">Paper</a>
+          {% endif %}
+          {% if paper.preprint %}
+          <a class="publication-link" href="{{ paper.preprint }}" target="_blank" rel="noopener noreferrer">Preprint</a>
+          {% endif %}
+          {% if paper.code %}
+          <a class="publication-link" href="{{ paper.code }}" target="_blank" rel="noopener noreferrer">Code</a>
+          {% endif %}
+          {% if paper.data %}
+          <a class="publication-link" href="{{ paper.data }}" target="_blank" rel="noopener noreferrer">Data</a>
+          {% endif %}
+          {% if paper.prereg %}
+          <a class="publication-link" href="{{ paper.prereg }}" target="_blank" rel="noopener noreferrer">Registration</a>
+          {% endif %}
+          {% if paper.slides %}
+          <a class="publication-link" href="{{ paper.slides }}" target="_blank" rel="noopener noreferrer">Slides</a>
+          {% endif %}
+          {% if paper.poster %}
+          <a class="publication-link" href="{{ paper.poster }}" target="_blank" rel="noopener noreferrer">Poster</a>
+          {% endif %}
+          {% if paper.video %}
+          <a class="publication-link" href="{{ paper.video }}" target="_blank" rel="noopener noreferrer">Video</a>
+          {% endif %}
+        </div>
+
+        <div id="abstract-content-{{ forloop.index }}" class="abstract-panel" aria-hidden="true">
+          <p>{{ paper.abstract }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
