@@ -6,7 +6,15 @@
   --line: #d8dde3;
   --paper: #fbfbf9;
   --font-serif: "IBM Plex Serif", serif;
+  
+  --font-serif: "IBM Plex Serif", serif;
   --font-sans: "IBM Plex Sans", sans-serif;
+  --fs-xl: 2.6rem;
+  --fs-lg: 1.8rem;
+  --fs-mlg: 1.5rem; /* Optical compensation */
+  --fs-md: 1.35rem;
+  --fs-sm: 1.0rem;
+
 }
 
 html {
@@ -56,8 +64,7 @@ button:focus-visible {
 }
 
 .site-header {
-  padding-bottom: 20px;
-  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0px; /* Reducido para acortar distancia entre tabs y contenido */
 }
 
 .masthead {
@@ -98,12 +105,12 @@ button:focus-visible {
 .publication-title,
 .inner-header-home,
 .post-header h1 {
-  font-family: var(--font-serif);
+  font-family: inherit; /* Unificado con el resto de la página */
 }
 
 .site-title {
   margin: 0;
-  font-size: 2.9rem;
+  font-size: var(--fs-xl);
   line-height: 1.02;
   font-weight: 600;
   color: var(--ink);
@@ -111,7 +118,7 @@ button:focus-visible {
 
 .site-subtitle {
   margin: 0;
-  font-size: 1.02rem;
+  font-size: var(--fs-sm);
   font-weight: 600;
   line-height: 1.45;
   color: var(--ink);
@@ -119,20 +126,20 @@ button:focus-visible {
 
 .site-affiliation {
   margin: 0;
-  font-size: 1.02rem;
+  font-size: var(--fs-sm);
   line-height: 1.55;
   color: var(--muted);
 }
 
 .site-summary {
   margin: 10px 0 0;
-  font-size: 1.3rem;
+  font-size: var(--fs-md);
   line-height: 1.72;
 }
 
 .site-email {
   margin: 2px 0 0;
-  font-size: 0.98rem;
+  font-size: var(--fs-sm);
   line-height: 1.5;
   color: var(--ink);
   overflow-wrap: anywhere;
@@ -144,7 +151,7 @@ button:focus-visible {
   align-items: flex-start;
   gap: 12px;
   margin-top: 4px;
-  font-size: 1.08rem;
+  font-size: var(--fs-sm);
 }
 
 .site-links a {
@@ -163,24 +170,24 @@ button:focus-visible {
 }
 
 .site-links i {
-  font-size: 1.35rem;
+  font-size: var(--fs-md);
 }
 
 .site-nav {
   display: flex;
-  gap: 18px;
-  padding: 14px 0 10px;
+  gap: 20px;
+  padding: 32px 0 0;
   border-bottom: 1px solid var(--line);
-  margin-bottom: 20px;
 }
 
 .site-nav-link {
-  padding-bottom: 4px;
+  padding-bottom: 8px;
   border-bottom: 2px solid transparent;
   color: var(--muted);
-  font-size: 1.18rem;
+  font-size: var(--fs-lg); /* Navegación (solapas) a 1.8 */
   font-weight: 600;
   letter-spacing: 0.02em;
+  margin-bottom: -1px; /* Align active line directly over the nav border */
 }
 
 .site-nav-link:hover,
@@ -192,6 +199,7 @@ button:focus-visible {
 
 .page-content {
   min-height: 50vh;
+  margin-left: 244px; /* Align content perfectly with the masthead-main / tabs */
 }
 
 .content-section {
@@ -204,12 +212,12 @@ button:focus-visible {
 }
 
 .section-header {
-  margin-bottom: 14px;
+  display: none; /* Hidden to remove redundant titles below tabs */
 }
 
 .section-header h2 {
   margin: 0;
-  font-size: 2.4rem;
+  font-size: var(--fs-xl);
   line-height: 1.1;
   font-weight: 600;
   color: var(--ink);
@@ -223,12 +231,12 @@ button:focus-visible {
 .post-content p,
 .post-content li {
   margin: 0 0 1rem;
-  font-size: 1.34rem;
+  font-size: var(--fs-md); /* Texto de Bio (1.35rem) */
   line-height: 1.78;
 }
 
 .lead-paragraph {
-  font-size: 1.52rem;
+  font-size: var(--fs-md);
 }
 
 .prose a,
@@ -238,7 +246,7 @@ button:focus-visible {
 }
 
 .publications-list {
-  border-top: 1px solid var(--line);
+  border-top: none; /* Removed to match Bio styling */
 }
 
 .publication {
@@ -246,9 +254,13 @@ button:focus-visible {
   border-bottom: 1px solid var(--line);
 }
 
+.publication:first-child {
+  padding-top: 0px; /* Make top spacing identical to Bio text */
+}
+
 .publication-title {
   margin: 0 0 4px;
-  font-size: 1.78rem;
+  font-size: var(--fs-mlg); /* Apenas más grande que el texto base (1.5rem) */
   line-height: 1.28;
   font-weight: 600;
   color: var(--ink);
@@ -258,7 +270,12 @@ button:focus-visible {
 .publication-venue,
 .publication-award {
   margin: 0 0 4px;
-  font-size: 1.2rem;
+  font-size: var(--fs-md); /* Igual a la descripción (1.35rem) */
+}
+
+/* Evitamos que el selector global de "publication p" sobrescriba otras clases */
+.publication > p:not([class]) {
+  font-size: var(--fs-md);
 }
 
 .publication-authors {
@@ -295,7 +312,7 @@ button:focus-visible {
   box-sizing: border-box;
   margin: 0;
   font-family: var(--font-sans);
-  font-size: 1.08rem;
+  font-size: var(--fs-sm);
   line-height: 1;
   letter-spacing: normal;
   text-transform: none;
@@ -321,7 +338,7 @@ button:focus-visible {
   display: inline-block;
   width: 0.9rem;
   color: var(--accent);
-  font-size: 1.2rem;
+  font-size: var(--fs-md);
   font-weight: 600;
   line-height: 1;
   text-align: center;
@@ -378,7 +395,7 @@ button:focus-visible {
 
 .abstract-panel p {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: var(--fs-md);
   line-height: 1.72;
 }
 
@@ -387,7 +404,7 @@ button:focus-visible {
   padding-top: 12px;
   border-top: 1px solid var(--line);
   color: var(--muted);
-  font-size: 1.18rem;
+  font-size: var(--fs-md);
 }
 
 .site-footer p {
@@ -409,13 +426,13 @@ button:focus-visible {
   padding: 0;
   border: 0;
   background: transparent;
-  font-size: 1.8rem;
+  font-size: var(--fs-lg);
 }
 
 .inner-header-title {
   margin: 0;
   color: var(--muted);
-  font-size: 1.2rem;
+  font-size: var(--fs-md);
 }
 
 .blog-post-detail {
@@ -424,14 +441,14 @@ button:focus-visible {
 
 .post-header h1 {
   margin: 0 0 8px;
-  font-size: 2.5rem;
+  font-size: var(--fs-xl);
   line-height: 1.08;
 }
 
 .post-meta {
   margin: 0 0 24px;
   color: var(--muted);
-  font-size: 1.18rem;
+  font-size: var(--fs-md);
 }
 
 .post-content ul,
@@ -448,10 +465,17 @@ button:focus-visible {
 
 .post-content code {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-  font-size: 0.95em;
+  font-size: var(--fs-sm);
 }
 
 @media (max-width: 640px) {
+  :root {
+    --fs-xl: 2.1rem;
+    --fs-lg: 1.5rem;
+    --fs-mlg: 1.3rem; /* Mobile scale */
+    --fs-md: 1.15rem;
+    --fs-sm: 0.95rem;
+  }
   .site-shell {
     width: calc(100% - 24px);
     padding-top: 28px;
@@ -482,32 +506,24 @@ button:focus-visible {
     width: 72px;
   }
 
-  .site-title {
-    font-size: 2.2rem;
-  }
-
   .masthead-meta {
     max-width: none;
     gap: 4px;
   }
 
   .section-header h2 {
-    font-size: 2rem;
+    font-size: var(--fs-lg);
   }
 
   .publication-title {
-    font-size: 1.56rem;
-  }
-
-  .site-summary {
-    font-size: 1.18rem;
+    font-size: var(--fs-md);
   }
 
   .site-subtitle,
   .site-affiliation,
   .site-email,
   .site-links {
-    font-size: 0.98rem;
+    font-size: var(--fs-sm);
   }
 
   .site-links {
@@ -515,19 +531,17 @@ button:focus-visible {
     gap: 8px 12px;
   }
 
-  .prose p,
-  .post-content p,
-  .post-content li {
-    font-size: 1.22rem;
-  }
-
   .lead-paragraph {
-    font-size: 1.34rem;
+    font-size: var(--fs-md);
   }
 
   .site-nav {
     gap: 14px;
     overflow-x: auto;
+  }
+
+  .page-content {
+    margin-left: 0;
   }
 
   .inner-header {

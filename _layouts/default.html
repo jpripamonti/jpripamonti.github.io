@@ -37,7 +37,6 @@
 </head>
 <body class="{% if page.title == 'Home' %}page-home{% else %}page-inner{% endif %}">
   <div class="site-shell">
-    {% if page.title == 'Home' %}
     <header class="site-header" id="top">
       <div class="masthead">
         <div class="masthead-side">
@@ -69,28 +68,19 @@
         <div class="masthead-main">
           <h1 class="site-title">{{ site.data.main_info.name }}</h1>
           <p class="site-summary">My research focuses on how governance actors influence the legitimacy of democratic institutions through their policies and practices. I study transparency, formal complaint systems, and citizen trust in government organizations.</p>
+          <nav class="site-nav" aria-label="Section navigation">
+            <a class="site-nav-link{% if page.url == '/' or page.url == '/index.html' %} active{% endif %}" href="{{ '/' | relative_url }}">Bio</a>
+            <a class="site-nav-link{% if page.url contains 'publications' or page.title == 'Publications' %} active{% endif %}" href="{{ '/publications.html' | relative_url }}">Publications</a>
+            <a class="site-nav-link{% if page.url contains 'software' or page.title == 'Other' %} active{% endif %}" href="{{ '/software.html' | relative_url }}">Other</a>
+          </nav>
         </div>
       </div>
     </header>
-
-    <nav class="site-nav" aria-label="Section navigation">
-      <a class="site-nav-link" data-section-link href="#bio">Bio</a>
-      <a class="site-nav-link" data-section-link href="#publications">Publications</a>
-    </nav>
-    {% else %}
-    <header class="inner-header">
-      <a class="inner-header-home" href="{{ '/' | relative_url }}">{{ site.data.main_info.name }}</a>
-      <p class="inner-header-title">{{ page.title }}</p>
-    </header>
-    {% endif %}
 
     <main class="page-content">
       {{ content }}
     </main>
 
-    <footer class="site-footer">
-      <p>{{ site.data.main_info.email }}</p>
-    </footer>
   </div>
 
   <span id="62cd7b7da1aff3196fdc26b60e396df9"></span>
