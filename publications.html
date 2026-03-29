@@ -1,0 +1,62 @@
+---
+layout: default
+title: Publications
+---
+<section class="content-section" id="publications">
+  <div class="section-header">
+    <h2>Publications</h2>
+  </div>
+  <div class="section-content">
+    <div class="publications-list">
+      {% assign all_papers = site.data.publications.papers %}
+      {% for paper in all_papers %}
+      <article class="publication">
+        <h3 class="publication-title">{{ paper.title }}</h3>
+        <p class="publication-authors">{{ paper.authors }}</p>
+        <p class="publication-venue">
+          <span>{{ paper.venue }}{% if paper.year %}, {{ paper.year }}{% endif %}</span>
+        </p>
+        {% if paper.award %}
+        <p class="publication-award"><i class="fa fa-trophy" aria-hidden="true"></i> {{ paper.award }}</p>
+        {% endif %}
+
+        <div id="abstract-content-{{ forloop.index }}" class="abstract-panel" aria-hidden="true">
+          <p>{{ paper.abstract }}</p>
+        </div>
+
+        <div class="publication-links">
+          <button class="toggle-abstract" type="button" aria-controls="abstract-content-{{ forloop.index }}" aria-expanded="false">Show abstract</button>
+          {% if paper.paper_pdf %}
+          <a class="publication-link" href="{{ paper.paper_pdf }}" target="_blank" rel="noopener noreferrer">Paper</a>
+          {% endif %}
+          {% if paper.preprint %}
+          <a class="publication-link" href="{{ paper.preprint }}" target="_blank" rel="noopener noreferrer">Preprint</a>
+          {% endif %}
+          {% if paper.code %}
+          <a class="publication-link" href="{{ paper.code }}" target="_blank" rel="noopener noreferrer">Code</a>
+          {% endif %}
+          {% if paper.data %}
+          <a class="publication-link" href="{{ paper.data }}" target="_blank" rel="noopener noreferrer">Data</a>
+          {% endif %}
+          {% if paper.appendix %}
+          <a class="publication-link" href="{{ paper.appendix }}" target="_blank" rel="noopener noreferrer">Appendix</a>
+          {% endif %}
+          {% if paper.prereg %}
+          <a class="publication-link" href="{{ paper.prereg }}" target="_blank" rel="noopener noreferrer">Registration</a>
+          {% endif %}
+          {% if paper.slides %}
+          <a class="publication-link" href="{{ paper.slides }}" target="_blank" rel="noopener noreferrer">Slides</a>
+          {% endif %}
+          {% if paper.poster %}
+          <a class="publication-link" href="{{ paper.poster }}" target="_blank" rel="noopener noreferrer">Poster</a>
+          {% endif %}
+          {% if paper.video %}
+          <a class="publication-link" href="{{ paper.video }}" target="_blank" rel="noopener noreferrer">Video</a>
+          {% endif %}
+        </div>
+
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
