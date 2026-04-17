@@ -14,7 +14,7 @@ papers:
 
   - title: "How Transparency Influences Trust in Government: A Multi-Mechanism Framework."
     authors: "Juan Pablo Ripamonti, Greg Porumbescu, Greta Nasi"
-    venue: "Manuscript submitted for publication"
+    venue: "Revise and resubmit at Perspectives on Public Management and Governance"
     sourceLink: ""
     abstract: "While the relationship between transparency and trust in government is increasingly recognized as complex, existing theories offer fragmented accounts that focus on different aspects of the relationship. As a result, we lack clear explanations for divergent empirical findings and for when transparency affects trust. We address this gap by developing an integrative framework grounded in citizens’ attribution processes. We argue that transparency shapes trust in public organizations by providing cues that citizens use to infer whether an organization has the capacity and orientation to meet expectations. Such cues may arise from disclosure itself, from citizens’ engagement with disclosed information directly or via intermediaries, and from organizational behavioral and performance changes induced by transparency arrangements. We label these pathways disclosure-, information-, and behavior-based mechanisms, and specify key conditions and contextual moderators under which they influence trust. We illustrate the framework using hypothetical scenarios involving police body-worn cameras and hospital performance reporting, and discuss implications for research and the design of transparency initiatives."
     #preprint: ""
@@ -41,4 +41,3 @@ papers:
     abstract: "This chapter examines the transformative potential of additive manufacturing (AM), or 3D printing, as a catalyst for a new industrial revolution. It contrasts AM with the traditional factory system, discussing how AM could decentralize production and enable mass customization. By presenting two scenarios, the chapter explores the economic and social impacts of widespread AM adoption, including shifts in labor markets, challenges to global supply chains, and issues surrounding intellectual property in a digital world. The discussion concludes by considering the broader implications of AM, highlighting its potential to democratize production and reduce waste while raising critical questions about economic stability and the future of work."
     year: "2018"
     selected: y
-
