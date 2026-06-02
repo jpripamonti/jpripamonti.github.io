@@ -4,7 +4,12 @@ $(document).ready(() => {
   const $links = $(".site-nav-link[data-section-link]");
   const $sections = $("[data-section]");
   const setAbstractLabel = ($button, isOpen) => {
-    $button.text(isOpen ? "Hide abstract" : "Show abstract");
+    const isDescription = $button.data("label-type") === "description";
+    if (isDescription) {
+      $button.text(isOpen ? "Hide description" : "Show description");
+    } else {
+      $button.text(isOpen ? "Hide abstract" : "Show abstract");
+    }
   };
 
   const updateActiveSection = () => {

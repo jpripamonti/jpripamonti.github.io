@@ -17,12 +17,12 @@ title: Datasets
           <span>Harvard Dataverse{% if dataset.year %}, {{ dataset.year }}{% endif %}</span>
         </p>
 
-        <div id="dataset-abstract-{{ forloop.index }}" class="abstract-panel" aria-hidden="true">
-          <p>{{ dataset.abstract }}</p>
+        <div id="dataset-description-{{ forloop.index }}" class="abstract-panel" aria-hidden="true">
+          <p>{{ dataset.description }}</p>
         </div>
 
         <div class="publication-links">
-          <button class="toggle-abstract" type="button" aria-controls="dataset-abstract-{{ forloop.index }}" aria-expanded="false">Show abstract</button>
+          <button class="toggle-abstract" type="button" aria-controls="dataset-description-{{ forloop.index }}" aria-expanded="false" data-label-type="description">Show description</button>
           {% if dataset.doi %}
           <a class="publication-link" href="{{ dataset.doi }}" target="_blank" rel="noopener noreferrer">Dataset</a>
           {% endif %}
