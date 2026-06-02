@@ -4,13 +4,13 @@ datasets:
     authors: "Juan Pablo Ripamonti"
     year: "2026"
     doi: "https://doi.org/10.7910/DVN/PVKZCM"
-    abstract: "This dataset contains official electoral results for the Ciudad Autónoma de Buenos Aires (CABA), Argentina, normalized at the polling-table level. It includes national elections from 2011 through 2025 and CABA city elections from 2013 through 2025, covering offices such as Head of Government, City Legislature, and Communal Boards. The data were curated from official BA Data/GCBA, Tribunal Superior de Justicia historical references, DINE, and Datos Argentina sources, providing table-level result rows with a comprehensive manifest and coverage reports."
+    description: "This dataset contains official electoral results for the Ciudad Autónoma de Buenos Aires (CABA), Argentina, normalized at the polling-table level. It includes national elections from 2011 through 2025 and CABA city elections from 2013 through 2025, covering offices such as Head of Government, City Legislature, and Communal Boards. The data were curated from official BA Data/GCBA, Tribunal Superior de Justicia historical references, DINE, and Datos Argentina sources, providing table-level result rows with a comprehensive manifest and coverage reports."
 
   - title: "Geocoded Polling Places in the Ciudad Autónoma de Buenos Aires, 2011-2025"
     authors: "Juan Pablo Ripamonti"
     year: "2026"
     doi: "https://doi.org/10.7910/DVN/RBAYGP"
-    abstract: "This dataset contains geocoded voting locations for the Ciudad Autónoma de Buenos Aires (CABA), Argentina, covering elections from 2011 through 2025. The unit of observation is a voting-location assignment by year and table range: year x voting location x voting table range. The public files preserve original establishment, address, and locality fields alongside curated canonical establishment names, canonical addresses, opaque entity identifiers, and WGS84 coordinates."
+    description: "This dataset contains geocoded voting locations for the Ciudad Autónoma de Buenos Aires (CABA), Argentina, covering elections from 2011 through 2025. The unit of observation is a voting-location assignment by year and table range: year x voting location x voting table range. The public files preserve original establishment, address, and locality fields alongside curated canonical establishment names, canonical addresses, opaque entity identifiers, and WGS84 coordinates."
 
 papers:
 
