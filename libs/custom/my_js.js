@@ -1,112 +1,54 @@
-$(document).ready(() => {
-  const $window = $(window);
-  const $nav = $(".site-nav");
-  const $links = $(".site-nav-link[data-section-link]");
-  const $sections = $("[data-section]");
-  const setAbstractLabel = ($button, isOpen) => {
-    const isDescription = $button.data("label-type") === "description";
+document.addEventListener("DOMContentLoaded", () => {
+  const setAbstractLabel = (button, isOpen) => {
+    const isDescription = button.dataset.labelType === "description";
     if (isDescription) {
-      $button.text(isOpen ? "Hide description" : "Show description");
+      button.textContent = isOpen ? "Hide description" : "Show description";
     } else {
-      $button.text(isOpen ? "Hide abstract" : "Show abstract");
+      button.textContent = isOpen ? "Hide abstract" : "Show abstract";
     }
   };
 
-  const updateActiveSection = () => {
-    if (!$links.length || !$sections.length) {
-      return;
+  const closeAbstract = (button) => {
+    const panel = document.getElementById(button.getAttribute("aria-controls"));
+    button.setAttribute("aria-expanded", "false");
+    setAbstractLabel(button, false);
+    if (panel) {
+      panel.hidden = true;
+      panel.setAttribute("aria-hidden", "true");
     }
-
-    const navHeight = $nav.outerHeight() || 0;
-    const scrollPosition = $window.scrollTop() + navHeight + 100;
-    let activeId = $sections.first().attr("id");
-
-    $sections.each(function () {
-      const $section = $(this);
-      if (scrollPosition >= $section.offset().top) {
-        activeId = $section.attr("id");
-      }
-    });
-
-    $links.each(function () {
-      const isActive = this.hash === `#${activeId}`;
-      $(this).toggleClass("active", isActive);
-      if (isActive) {
-        $(this).attr("aria-current", "location");
-      } else {
-        $(this).removeAttr("aria-current");
-      }
-    });
   };
 
-  const smoothScroll = function (event) {
-    const hash = this.hash;
-    if (!hash) {
-      return;
+  const openAbstract = (button) => {
+    const panel = document.getElementById(button.getAttribute("aria-controls"));
+    button.setAttribute("aria-expanded", "true");
+    setAbstractLabel(button, true);
+    if (panel) {
+      panel.hidden = false;
+      panel.setAttribute("aria-hidden", "false");
+    }
+  };
+
+  document.querySelectorAll(".toggle-abstract").forEach((button) => {
+    setAbstractLabel(button, false);
+    const panel = document.getElementById(button.getAttribute("aria-controls"));
+    if (panel) {
+      panel.hidden = true;
+      panel.setAttribute("aria-hidden", "true");
     }
 
-    const $target = $(hash);
-    if (!$target.length) {
-      return;
-    }
-
-    event.preventDefault();
-    const navOffset = ($nav.outerHeight() || 0) + 16;
-
-    $("html, body").stop().animate(
-      { scrollTop: Math.max($target.offset().top - navOffset, 0) },
-      320,
-      "swing",
-      () => {
-        if (window.history && window.history.pushState) {
-          window.history.pushState(null, "", hash);
-        } else {
-          window.location.hash = hash;
+    button.addEventListener("click", () => {
+      const isOpen = button.getAttribute("aria-expanded") === "true";
+      document.querySelectorAll(".toggle-abstract").forEach((otherButton) => {
+        if (otherButton !== button) {
+          closeAbstract(otherButton);
         }
-        updateActiveSection();
+      });
+
+      if (isOpen) {
+        closeAbstract(button);
+      } else {
+        openAbstract(button);
       }
-    );
-  };
-
-  const closeAbstract = ($button) => {
-    const panelId = $button.attr("aria-controls");
-    const $panel = $("#" + panelId);
-    $button.attr("aria-expanded", "false");
-    setAbstractLabel($button, false);
-    $panel.stop(true, true).slideUp(180).attr("aria-hidden", "true");
-  };
-
-  const openAbstract = ($button) => {
-    const panelId = $button.attr("aria-controls");
-    const $panel = $("#" + panelId);
-    $button.attr("aria-expanded", "true");
-    setAbstractLabel($button, true);
-    $panel.stop(true, true).slideDown(180).attr("aria-hidden", "false");
-  };
-
-  $links.on("click", smoothScroll);
-
-  $(document).on("click", ".toggle-abstract", function () {
-    const $button = $(this);
-    const isOpen = $button.attr("aria-expanded") === "true";
-
-    $(".toggle-abstract").not($button).each(function () {
-      closeAbstract($(this));
     });
-
-    if (isOpen) {
-      closeAbstract($button);
-    } else {
-      openAbstract($button);
-    }
   });
-
-  $(".toggle-abstract").each(function () {
-    setAbstractLabel($(this), false);
-  });
-
-  $(".abstract-panel").hide().attr("aria-hidden", "true");
-
-  $window.on("scroll resize", updateActiveSection);
-  updateActiveSection();
 });

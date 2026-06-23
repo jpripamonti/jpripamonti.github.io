@@ -2,10 +2,15 @@ source:      .
 destination: ./_site
 includes:    ./_includes
 baseurl: ""
-
-collections:
-  projects:
-    output: true
+url: "https://jpripamonti.github.io"
+title: "Juan Pablo Ripamonti"
+description: "Homepage for Juan Pablo Ripamonti, researcher in public policy, transparency, and democratic trust."
 
 highlighter: rouge
 
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - THIRD_PARTY_NOTICES.md

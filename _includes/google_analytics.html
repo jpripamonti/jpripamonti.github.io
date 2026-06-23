@@ -1,9 +1,10 @@
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QHZKBC5W97"></script>
+{% if site.data.main_info.analytics_enabled == true and site.data.main_info.google_analytics_measurement_id %}
+{% assign measurement_id = site.data.main_info.google_analytics_measurement_id %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ measurement_id }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
-  gtag('config', 'G-QHZKBC5W97');
+  gtag('config', '{{ measurement_id }}');
 </script>
+{% endif %}
