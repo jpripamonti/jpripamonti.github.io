@@ -1,6 +1,7 @@
 .DS_Store
 */.DS_Store
 .jekyll-cache
+.claude/
 _site/*
 _snap_md5.txt
 

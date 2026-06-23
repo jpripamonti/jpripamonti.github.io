@@ -1,10 +1,11 @@
 ---
 layout: default
 title: Datasets
+description: "Research datasets by Juan Pablo Ripamonti, with Dataverse links, coverage notes, and citation guidance."
 ---
 <section class="content-section" id="datasets">
   <div class="section-header">
-    <h2>Datasets</h2>
+    <h1>Datasets</h1>
   </div>
   <div class="section-content">
     <div class="publications-list">
@@ -16,6 +17,20 @@ title: Datasets
         <p class="publication-venue">
           <span>Harvard Dataverse{% if dataset.year %}, {{ dataset.year }}{% endif %}</span>
         </p>
+        <dl class="dataset-meta">
+          {% if dataset.status %}
+          <div><dt>Status</dt><dd>{{ dataset.status }}</dd></div>
+          {% endif %}
+          {% if dataset.coverage %}
+          <div><dt>Coverage</dt><dd>{{ dataset.coverage }}</dd></div>
+          {% endif %}
+          {% if dataset.citation %}
+          <div><dt>Citation</dt><dd>{{ dataset.citation }}</dd></div>
+          {% endif %}
+          {% if dataset.limitations %}
+          <div><dt>Notes</dt><dd>{{ dataset.limitations }}</dd></div>
+          {% endif %}
+        </dl>
 
         <div id="dataset-description-{{ forloop.index }}" class="abstract-panel" aria-hidden="true">
           <p>{{ dataset.description }}</p>

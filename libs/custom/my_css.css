@@ -70,6 +70,7 @@ button { font: inherit; }
 
 .nav-link:hover { color: var(--text); text-decoration: none; }
 .nav-link.active { color: var(--text); border-bottom-color: var(--text); }
+.nav-link[aria-current="page"] { color: var(--text); border-bottom-color: var(--text); }
 
 /* ── Two-column body ── */
 .page-body {
@@ -153,6 +154,25 @@ button { font: inherit; }
 /* ── Main content ── */
 .main-content { min-width: 0; }
 
+.site-footer {
+  margin-top: 44px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  font-size: 0.75rem;
+  color: var(--subtle);
+}
+
+.site-footer a {
+  color: var(--subtle);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.site-footer a:hover {
+  color: var(--text);
+  border-bottom-color: var(--text);
+}
+
 /* ── Prose ── */
 .prose p {
   margin-bottom: 1em;
@@ -175,6 +195,22 @@ button { font: inherit; }
 .prose em { font-style: italic; }
 .prose strong { font-weight: 600; }
 
+.section-header h1 {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1.35;
+  margin-bottom: 18px;
+}
+
+.section-header h2 {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.35;
+  margin-bottom: 14px;
+}
+
 /* ── Section label ── */
 .section-label {
   font-size: 0.7rem;
@@ -187,6 +223,18 @@ button { font: inherit; }
 
 /* ── Publications ── */
 .publications-list { list-style: none; padding: 0; }
+
+.publication-section-title {
+  font-family: var(--sans);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--subtle);
+  margin: 30px 0 8px;
+}
+
+.publication-section-title:first-child { margin-top: 0; }
 
 .publication {
   padding: 22px 0;
@@ -251,6 +299,34 @@ button { font: inherit; }
 
 .publication-link:hover { color: var(--accent-h); text-decoration: none; }
 
+.publication-note {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--subtle);
+  margin-top: 10px;
+}
+
+.dataset-meta {
+  display: grid;
+  gap: 6px;
+  margin: 10px 0 8px;
+  font-size: 0.78rem;
+  color: var(--subtle);
+}
+
+.dataset-meta div {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 10px;
+}
+
+.dataset-meta dt {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.dataset-meta dd { line-height: 1.5; }
+
 .toggle-abstract {
   font-size: 0.78rem;
   color: var(--subtle);
@@ -265,7 +341,6 @@ button { font: inherit; }
 .toggle-abstract:hover { color: var(--text); }
 
 .abstract-panel {
-  display: none;
   margin-top: 12px;
   font-size: 0.845rem;
   line-height: 1.72;
@@ -275,7 +350,53 @@ button { font: inherit; }
   text-wrap: pretty;
 }
 
-.abstract-panel.is-open { display: block; }
+.abstract-panel[hidden] { display: none; }
+
+/* ── Posts ── */
+.blog-post-detail {
+  font-size: 0.925rem;
+  line-height: 1.78;
+}
+
+.post-header { margin-bottom: 22px; }
+
+.post-header h1 {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+
+.post-meta {
+  color: var(--subtle);
+  font-size: 0.78rem;
+}
+
+.post-content p { margin-bottom: 1em; }
+
+.post-content pre {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 12px 14px;
+  margin: 16px 0;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-size: 0.82rem;
+}
+
+.post-content code {
+  white-space: pre;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.post-content :not(pre) > code {
+  white-space: normal;
+  font-size: 0.88em;
+  padding: 1px 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
 
 /* ── Other / Software ── */
 .software-list { list-style: none; padding: 0; }
@@ -322,6 +443,24 @@ button { font: inherit; }
   .shell { padding: 0 18px 60px; }
 
   .site-header { padding: 28px 0 24px; }
+
+  .page-body { padding-top: 28px; }
+
+  .sidebar { gap: 10px 16px; }
+
+  .profile-photo {
+    width: 56px;
+    height: 56px;
+  }
+
+  .sidebar-links {
+    flex-basis: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+  }
+
+  .dataset-meta div { grid-template-columns: 1fr; gap: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {

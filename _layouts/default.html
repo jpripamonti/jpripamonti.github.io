@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
   {% include google_analytics.html %}
+  {% assign page_description = page.description | default: site.description %}
   <meta charset="utf-8">
   <title>{{ site.data.main_info.name }} | {{ page.title }}</title>
-  <meta name="description" content="Homepage for Juan Pablo Ripamonti, researcher in public policy, transparency, and democratic trust.">
+  <meta name="description" content="{{ page_description }}">
   <meta name="author" content="Juan Pablo Ripamonti">
   <meta property="og:title" content="{{ site.data.main_info.name }} | {{ page.title }}">
-  <meta property="og:description" content="Research in transparency, complaint systems, and citizen trust in government organizations.">
+  <meta property="og:description" content="{{ page_description }}">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jpripamonti.github.io">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:site_name" content="{{ site.data.main_info.name }}">
-  <link rel="canonical" href="https://jpripamonti.github.io">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,11 +20,11 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="{{ '/libs/custom/my_css.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/syntax.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/libs/external/font-awesome-4.7.0/css/font-awesome.min.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/libs/external/academicons-1.8.6/css/academicons.min.css' | relative_url }}">
 
-  <script src="{{ '/libs/external/jquery-3.1.1.min.js' | relative_url }}"></script>
-  <script src="{{ '/libs/custom/my_js.js' | relative_url }}"></script>
+  <script src="{{ '/libs/custom/my_js.js' | relative_url }}" defer></script>
 
   <link rel="icon" type="image/png" href="{{ '/libs/icon.jpeg' | relative_url }}">
   <link rel="shortcut icon" type="image/png" href="{{ '/libs/icon.jpeg' | relative_url }}">
@@ -38,17 +39,17 @@
     <header class="site-header">
       <a class="site-name" href="{{ '/' | relative_url }}">{{ site.data.main_info.name }}</a>
       <nav class="site-nav" aria-label="Section navigation">
-        <a class="nav-link{% if page.url == '/' or page.url == '/index.html' %} active{% endif %}" href="{{ '/' | relative_url }}">Bio</a>
-        <a class="nav-link{% if page.url contains 'publications' %} active{% endif %}" href="{{ '/publications.html' | relative_url }}">Publications</a>
-        <a class="nav-link{% if page.url contains 'datasets' %} active{% endif %}" href="{{ '/datasets.html' | relative_url }}">Datasets</a>
-        <a class="nav-link{% if page.url contains 'software' %} active{% endif %}" href="{{ '/software.html' | relative_url }}">Other</a>
+        <a class="nav-link{% if page.url == '/' or page.url == '/index.html' %} active{% endif %}" href="{{ '/' | relative_url }}"{% if page.url == '/' or page.url == '/index.html' %} aria-current="page"{% endif %}>Bio</a>
+        <a class="nav-link{% if page.url contains 'publications' %} active{% endif %}" href="{{ '/publications.html' | relative_url }}"{% if page.url contains 'publications' %} aria-current="page"{% endif %}>Publications</a>
+        <a class="nav-link{% if page.url contains 'datasets' %} active{% endif %}" href="{{ '/datasets.html' | relative_url }}"{% if page.url contains 'datasets' %} aria-current="page"{% endif %}>Datasets</a>
+        <a class="nav-link{% if page.url contains 'software' %} active{% endif %}" href="{{ '/software.html' | relative_url }}"{% if page.url contains 'software' %} aria-current="page"{% endif %}>Other</a>
       </nav>
     </header>
 
     <div class="page-body">
 
       <aside class="sidebar">
-        <img class="profile-photo" src="{{ site.data.main_info.profile_pic | relative_url }}" alt="Portrait of {{ site.data.main_info.name }}" loading="lazy">
+        <img class="profile-photo" src="{{ site.data.main_info.profile_pic | relative_url }}" alt="Portrait of {{ site.data.main_info.name }}" width="72" height="72">
         <div class="sidebar-title">{{ site.data.main_info.title }}</div>
         <div class="sidebar-email">{{ site.data.main_info.email }}</div>
         <hr class="sidebar-divider">
@@ -81,9 +82,11 @@
       </main>
 
     </div>
+    <footer class="site-footer">
+      <a href="{{ '/privacy.html' | relative_url }}">Privacy</a>
+    </footer>
   </div>
 
   <span id="62cd7b7da1aff3196fdc26b60e396df9"></span>
-  <script src="{{ '/assets/js/enhanced-tracking.js' | relative_url }}"></script>
 </body>
 </html>

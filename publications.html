@@ -1,15 +1,22 @@
 ---
 layout: default
 title: Publications
+description: "Peer-reviewed publications, revise-and-resubmit manuscripts, papers under revision, and book chapters by Juan Pablo Ripamonti."
 ---
 <section class="content-section" id="publications">
   <div class="section-header">
-    <h2>Publications</h2>
+    <h1>Publications</h1>
   </div>
   <div class="section-content">
     <div class="publications-list">
-      {% assign all_papers = site.data.publications.papers %}
-      {% for paper in all_papers %}
+      {% assign peer_reviewed = site.data.publications.papers | where: "category", "peer_reviewed" %}
+      {% assign revise_and_resubmit = site.data.publications.papers | where: "category", "revise_and_resubmit" %}
+      {% assign under_revision = site.data.publications.papers | where: "category", "under_revision" %}
+      {% assign book_chapters = site.data.publications.papers | where: "category", "book_chapter" %}
+
+      {% if peer_reviewed.size > 0 %}
+      <h2 class="publication-section-title">Peer-reviewed publications</h2>
+      {% for paper in peer_reviewed %}
       <article class="publication">
         <h3 class="publication-title">{{ paper.title }}</h3>
         <p class="publication-authors">{{ paper.authors }}</p>
@@ -20,12 +27,20 @@ title: Publications
         <p class="publication-award"><i class="fa fa-trophy" aria-hidden="true"></i> {{ paper.award }}</p>
         {% endif %}
 
-        <div id="abstract-content-{{ forloop.index }}" class="abstract-panel" aria-hidden="true">
+        {% if paper.abstract %}
+        <div id="abstract-content-{{ paper.category }}-{{ forloop.index }}" class="abstract-panel" aria-hidden="true">
           <p>{{ paper.abstract }}</p>
         </div>
+        {% endif %}
+
+        {% if paper.data_note %}
+        <p class="publication-note">{{ paper.data_note }}</p>
+        {% endif %}
 
         <div class="publication-links">
-          <button class="toggle-abstract" type="button" aria-controls="abstract-content-{{ forloop.index }}" aria-expanded="false">Show abstract</button>
+          {% if paper.abstract %}
+          <button class="toggle-abstract" type="button" aria-controls="abstract-content-{{ paper.category }}-{{ forloop.index }}" aria-expanded="false">Show abstract</button>
+          {% endif %}
           {% if paper.paper_pdf %}
           <a class="publication-link" href="{{ paper.paper_pdf }}" target="_blank" rel="noopener noreferrer">Paper</a>
           {% endif %}
@@ -57,6 +72,78 @@ title: Publications
 
       </article>
       {% endfor %}
+      {% endif %}
+
+      {% if revise_and_resubmit.size > 0 %}
+      <h2 class="publication-section-title">Revise and resubmit</h2>
+      {% for paper in revise_and_resubmit %}
+      <article class="publication">
+        <h3 class="publication-title">{{ paper.title }}</h3>
+        <p class="publication-authors">{{ paper.authors }}</p>
+        <p class="publication-venue">
+          <span>{{ paper.venue }}</span>
+          <span class="publication-status">R&amp;R</span>
+        </p>
+        {% if paper.abstract %}
+        <div id="abstract-content-{{ paper.category }}-{{ forloop.index }}" class="abstract-panel" aria-hidden="true">
+          <p>{{ paper.abstract }}</p>
+        </div>
+        {% endif %}
+        <div class="publication-links">
+          {% if paper.abstract %}
+          <button class="toggle-abstract" type="button" aria-controls="abstract-content-{{ paper.category }}-{{ forloop.index }}" aria-expanded="false">Show abstract</button>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+      {% endif %}
+
+      {% if under_revision.size > 0 %}
+      <h2 class="publication-section-title">Under revision</h2>
+      {% for paper in under_revision %}
+      <article class="publication">
+        <h3 class="publication-title">{{ paper.title }}</h3>
+        <p class="publication-authors">{{ paper.authors }}</p>
+        <p class="publication-venue">
+          <span>{{ paper.venue }}</span>
+          <span class="publication-status">Paper under revision</span>
+        </p>
+        {% if paper.abstract %}
+        <div id="abstract-content-{{ paper.category }}-{{ forloop.index }}" class="abstract-panel" aria-hidden="true">
+          <p>{{ paper.abstract }}</p>
+        </div>
+        {% endif %}
+        <div class="publication-links">
+          {% if paper.abstract %}
+          <button class="toggle-abstract" type="button" aria-controls="abstract-content-{{ paper.category }}-{{ forloop.index }}" aria-expanded="false">Show abstract</button>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+      {% endif %}
+
+      {% if book_chapters.size > 0 %}
+      <h2 class="publication-section-title">Book chapters</h2>
+      {% for paper in book_chapters %}
+      <article class="publication">
+        <h3 class="publication-title">{{ paper.title }}</h3>
+        <p class="publication-authors">{{ paper.authors }}</p>
+        <p class="publication-venue">
+          <span>{{ paper.venue }}{% if paper.year %}, {{ paper.year }}{% endif %}</span>
+        </p>
+        {% if paper.abstract %}
+        <div id="abstract-content-{{ paper.category }}-{{ forloop.index }}" class="abstract-panel" aria-hidden="true">
+          <p>{{ paper.abstract }}</p>
+        </div>
+        {% endif %}
+        <div class="publication-links">
+          {% if paper.abstract %}
+          <button class="toggle-abstract" type="button" aria-controls="abstract-content-{{ paper.category }}-{{ forloop.index }}" aria-expanded="false">Show abstract</button>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+      {% endif %}
     </div>
   </div>
 </section>
