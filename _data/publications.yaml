@@ -1,5 +1,16 @@
 datasets:
 
+  - title: "Argentine Senate stenographic transcripts, 2000-2024: a speaker-attributed corpus"
+    authors: "Juan Pablo Ripamonti"
+    year: "2026"
+    repository: "Zenodo"
+    doi: "https://doi.org/10.5281/zenodo.22661019"
+    status: "Zenodo record, version 0.4.37. The DOI above always resolves to the latest version; 10.5281/zenodo.22661020 is this one."
+    coverage: "559 sittings of the Argentine Senate, February 2000 to December 2024. Complete from 2004 onward; thinner before that, because the chamber's portal lists the earlier sittings but no longer serves the files."
+    citation: "Cite the concept DOI for the corpus, or the version DOI when the exact files matter."
+    limitations: "Two sittings of November 2001 are character recognition of scans and should be excluded from text analysis, and one sitting does not parse at all. 1,109 passages carry no speaker. The caucus is observed on 336 days across 25 years rather than continuously, and every row says which day it was read from."
+    description: "Every stenographic record the Argentine Senate still serves for its sittings between 2000 and 2024, parsed from the chamber's own PDFs into 233,408 passages: 151,761 of speech, 18.4 million words, and 31,955 typed stenographer's notes. Each passage carries the speaker label the page printed, the senator that label resolves to, and the caucus that senator sat with on the day of the sitting — which is not the list they were elected on, and differs from it for nearly a fifth of floor speech. The deposit holds the corpus, the pipeline that produces it and the 36 hand-annotated pages the parser is scored against (F1 = 0.996 on 125 turns). The source PDFs are not redistributed: a manifest identifies each by checksum and URL, and the shipped downloader fetches them again."
+
   - title: "Electoral Results by Polling Table in the Ciudad Autónoma de Buenos Aires, 2011-2025"
     authors: "Juan Pablo Ripamonti"
     year: "2026"

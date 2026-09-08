@@ -1,4 +1,8 @@
 news_items:
+  - item: "Published a speaker-attributed corpus of Argentine Senate transcripts, 2000-2024, on Zenodo"
+    date: "September 2026"
+    link: "https://doi.org/10.5281/zenodo.22661019"
+
   - item: "Paper Published"
     date: "August 2024"
     link: "https://www.sciencedirect.com/science/article/pii/S0740624X24000522"
