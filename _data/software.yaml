@@ -1,7 +1,6 @@
 items:
   - title: "Cine Alternativo Buenos Aires"
-    description: "A daily guide to the independent and repertory cinema screening in Buenos Aires. It reads the listings of around thirty venues — a few as structured feeds, most as web pages interpreted by a language model — reconciles them into a single deduplicated schedule, adds credits and a one-line reason to watch for each film, and publishes two static pages. Written in Python 3 with no dependencies beyond the standard library, it runs unattended on a schedule and evaluates each of its own runs before replacing what is online."
-    note: "The site is published; the source is not."
+    description: "A static site that publishes what independent and repertory cinema is screening today in Buenos Aires. It reads the listings of around thirty venues, most of them web pages interpreted by a language model, and reconciles them into a single schedule. Python 3, standard library only."
     links:
       - label: "Visit Site"
         url: "https://cinealternativo.com.ar/"
