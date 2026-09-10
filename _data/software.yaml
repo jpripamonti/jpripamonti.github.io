@@ -30,3 +30,9 @@ items:
     links:
       - label: "Repository"
         url: "https://github.com/jpripamonti/euraxess-improved-search"
+
+  - title: "Claude Context Dashboard"
+    description: "A local dashboard for everything Claude Code loads when you start working in a project folder: the instructions files, the settings and permissions, the plugins, servers, skills, subagents, hooks and memory notes, each with the file that decided it, how much it adds at startup, a switch to turn it off and an editor to change it."
+    links:
+      - label: "Repository"
+        url: "https://github.com/jpripamonti/claude-context-dashboard"
