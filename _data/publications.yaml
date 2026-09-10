@@ -77,6 +77,8 @@ papers:
   - title: "Incumbency advantage narrows after FOI adoption, but only in smaller U.S. cities"
     authors: "Juan Pablo Ripamonti, Greta Nasi, Rebecca Kirley, Maria Cucciniello"
     venue: "Proceedings of the 60th Hawaii International Conference on System Sciences (HICSS-60)"
+    abstract: |
+      This study uses quasi-experimental methods to test whether state Freedom of Information (FOI) reform affects the incumbency advantage in U.S. mayoral elections, hypothesizing larger effects in smaller cities, where pre-existing scrutiny is weaker and administrative-political networks are more visible. Using mayoral-election data and coded state FOI effective dates, we estimate a close-election difference-in-discontinuities design separately by city size. For cities below the median population (about 84,000 residents), we estimate that FOI adoption reduces the close-election incumbency advantage by 14.6 percentage points (p = 0.004 with standard errors clustered on state, the level at which treatment is assigned), with no detectable effect in large cities or in the fully pooled sample. Supporting designs point the same way without being uniformly significant. The analysis contributes quasi-experimental evidence that the electoral effect of FOI adoption depends on city size, and reports a local-press test that narrows the candidate mechanisms without settling them.
     year: "2027"
     forthcoming: true
     category: conference
