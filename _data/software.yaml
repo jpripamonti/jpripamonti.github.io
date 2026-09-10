@@ -13,7 +13,6 @@ items:
 
   - title: "DualAudio"
     description: "A macOS prototype that creates a virtual output device named Dual Audio and mirrors audio from it to two selected physical output devices. It is intended for setups such as two Bluetooth headphones or a combination of wired and Bluetooth devices."
-    note: "Direct package downloads are currently disabled while release signing, notarization, checksums, and installation notes are reviewed. Use the repository for source and status."
     links:
       - label: "Repository"
         url: "https://github.com/jpripamonti/dual_audio"

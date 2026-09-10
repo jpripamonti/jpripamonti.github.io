@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Publications
-description: "Peer-reviewed publications, revise-and-resubmit manuscripts, papers under revision, and book chapters by Juan Pablo Ripamonti."
+description: "Peer-reviewed publications, conference papers, revise-and-resubmit manuscripts, and book chapters by Juan Pablo Ripamonti."
 ---
 <section class="content-section" id="publications">
   <div class="section-header">
@@ -10,6 +10,7 @@ description: "Peer-reviewed publications, revise-and-resubmit manuscripts, paper
   <div class="section-content">
     <div class="publications-list">
       {% assign peer_reviewed = site.data.publications.papers | where: "category", "peer_reviewed" %}
+      {% assign conference = site.data.publications.papers | where: "category", "conference" %}
       {% assign revise_and_resubmit = site.data.publications.papers | where: "category", "revise_and_resubmit" %}
       {% assign under_revision = site.data.publications.papers | where: "category", "under_revision" %}
       {% assign book_chapters = site.data.publications.papers | where: "category", "book_chapter" %}
@@ -70,6 +71,39 @@ description: "Peer-reviewed publications, revise-and-resubmit manuscripts, paper
           {% endif %}
         </div>
 
+      </article>
+      {% endfor %}
+      {% endif %}
+
+      {% if conference.size > 0 %}
+      <h2 class="publication-section-title">Conference papers</h2>
+      {% for paper in conference %}
+      <article class="publication">
+        <h3 class="publication-title">{{ paper.title }}</h3>
+        <p class="publication-authors">{{ paper.authors }}</p>
+        <p class="publication-venue">
+          <span>{{ paper.venue }}{% if paper.year %}, {{ paper.year }}{% endif %}</span>
+          {% if paper.forthcoming %}<span class="publication-status">Forthcoming</span>{% endif %}
+        </p>
+        {% if paper.abstract %}
+        <div id="abstract-content-{{ paper.category }}-{{ forloop.index }}" class="abstract-panel" aria-hidden="true">
+          <p>{{ paper.abstract }}</p>
+        </div>
+        {% endif %}
+        <div class="publication-links">
+          {% if paper.abstract %}
+          <button class="toggle-abstract" type="button" aria-controls="abstract-content-{{ paper.category }}-{{ forloop.index }}" aria-expanded="false">Show abstract</button>
+          {% endif %}
+          {% if paper.paper_pdf %}
+          <a class="publication-link" href="{{ paper.paper_pdf }}" target="_blank" rel="noopener noreferrer">Paper</a>
+          {% endif %}
+          {% if paper.preprint %}
+          <a class="publication-link" href="{{ paper.preprint }}" target="_blank" rel="noopener noreferrer">Preprint</a>
+          {% endif %}
+          {% if paper.slides %}
+          <a class="publication-link" href="{{ paper.slides }}" target="_blank" rel="noopener noreferrer">Slides</a>
+          {% endif %}
+        </div>
       </article>
       {% endfor %}
       {% endif %}

@@ -1,4 +1,7 @@
 news_items:
+  - item: "Paper accepted at HICSS-60, the Hawaii International Conference on System Sciences"
+    date: "September 2026"
+
   - item: "Published a speaker-attributed corpus of Argentine Senate transcripts, 2000-2024, on Zenodo"
     date: "September 2026"
     link: "https://doi.org/10.5281/zenodo.22661019"
