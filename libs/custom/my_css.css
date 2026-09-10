@@ -221,6 +221,9 @@ button { font: inherit; }
   margin-bottom: 16px;
 }
 
+/* ── Section intro ── */
+.section-intro { margin-bottom: 18px; }
+
 /* ── Publications ── */
 .publications-list { list-style: none; padding: 0; }
 
