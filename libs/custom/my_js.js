@@ -1,11 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const setAbstractLabel = (button, isOpen) => {
-    const isDescription = button.dataset.labelType === "description";
-    if (isDescription) {
-      button.textContent = isOpen ? "Hide description" : "Show description";
-    } else {
-      button.textContent = isOpen ? "Hide abstract" : "Show abstract";
-    }
+    const noun = button.dataset.labelNoun || "abstract";
+    button.textContent = `${isOpen ? "Hide" : "Show"} ${noun}`;
   };
 
   const closeAbstract = (button) => {

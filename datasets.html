@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Datasets
-description: "Research datasets by Juan Pablo Ripamonti, with repository links, coverage notes, and citation guidance."
+description: "Research datasets by Juan Pablo Ripamonti, with scale, coverage, and citation guidance for each deposit."
 ---
 <section class="content-section" id="datasets">
   <div class="section-header">
@@ -9,37 +9,49 @@ description: "Research datasets by Juan Pablo Ripamonti, with repository links, 
   </div>
   <div class="section-content">
     <div class="publications-list">
-      {% assign all_datasets = site.data.publications.datasets %}
-      {% for dataset in all_datasets %}
+      {% for dataset in site.data.publications.datasets %}
+      {% assign repo = dataset.repository | default: "Harvard Dataverse" %}
       <article class="publication">
         <h3 class="publication-title">{{ dataset.title }}</h3>
         <p class="publication-authors">{{ dataset.authors }}</p>
         <p class="publication-venue">
-          <span>{{ dataset.repository | default: "Harvard Dataverse" }}{% if dataset.year %}, {{ dataset.year }}{% endif %}</span>
+          <span>{{ repo }}{% if dataset.year %}, {{ dataset.year }}{% endif %}</span>
         </p>
-        <dl class="dataset-meta">
-          {% if dataset.status %}
-          <div><dt>Status</dt><dd>{{ dataset.status }}</dd></div>
+
+        {% if dataset.summary %}
+        <p class="dataset-summary">{{ dataset.summary }}</p>
+        {% endif %}
+
+        {% if dataset.stats %}
+        <dl class="dataset-stats">
+          {% for stat in dataset.stats %}
+          <div class="stat">
+            <dt class="stat-value">{{ stat.value }}</dt>
+            <dd class="stat-label">{{ stat.label }}</dd>
+          </div>
+          {% endfor %}
+        </dl>
+        {% endif %}
+
+        <div id="dataset-details-{{ forloop.index }}" class="abstract-panel" aria-hidden="true">
+          {% if dataset.description %}
+          <p>{{ dataset.description }}</p>
           {% endif %}
           {% if dataset.coverage %}
-          <div><dt>Coverage</dt><dd>{{ dataset.coverage }}</dd></div>
-          {% endif %}
-          {% if dataset.citation %}
-          <div><dt>Citation</dt><dd>{{ dataset.citation }}</dd></div>
+          <p><span class="detail-label">Coverage.</span> {{ dataset.coverage }}</p>
           {% endif %}
           {% if dataset.limitations %}
-          <div><dt>Notes</dt><dd>{{ dataset.limitations }}</dd></div>
+          <p><span class="detail-label">Caveats.</span> {{ dataset.limitations }}</p>
           {% endif %}
-        </dl>
-
-        <div id="dataset-description-{{ forloop.index }}" class="abstract-panel" aria-hidden="true">
-          <p>{{ dataset.description }}</p>
+          {% if dataset.citation %}
+          <p><span class="detail-label">Citation.</span> {{ dataset.citation }}</p>
+          {% endif %}
         </div>
 
         <div class="publication-links">
-          <button class="toggle-abstract" type="button" aria-controls="dataset-description-{{ forloop.index }}" aria-expanded="false" data-label-type="description">Show description</button>
+          <button class="toggle-abstract" type="button" aria-controls="dataset-details-{{ forloop.index }}" aria-expanded="false" data-label-noun="details">Show details</button>
           {% if dataset.doi %}
-          <a class="publication-link" href="{{ dataset.doi }}" target="_blank" rel="noopener noreferrer">Dataset</a>
+          <a class="publication-link" href="{{ dataset.doi }}" target="_blank" rel="noopener noreferrer">{{ repo }} record</a>
           {% endif %}
         </div>
       </article>
