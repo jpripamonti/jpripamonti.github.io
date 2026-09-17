@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Datasets
-description: "Datasets published by Juan Pablo Ripamonti, the Argentine Senate transcripts 2000-2024 and the Buenos Aires electoral results 2011-2025, with coverage and citation details."
+description: "Three open datasets by Juan Pablo Ripamonti: Argentine Senate transcripts 2000-2024, and Buenos Aires election results and geocoded polling places 2011-2025, with coverage and citation details."
 ---
 <section class="content-section" id="datasets">
   <div class="section-header">
@@ -12,7 +12,7 @@ description: "Datasets published by Juan Pablo Ripamonti, the Argentine Senate t
       {% for dataset in site.data.publications.datasets %}
       {% assign repo = dataset.repository | default: "Harvard Dataverse" %}
       <article class="publication">
-        <h3 class="publication-title">{{ dataset.title }}</h3>
+        <h2 class="publication-title">{{ dataset.title }}</h2>
         <p class="publication-authors">{{ dataset.authors }}</p>
         <p class="publication-venue">
           <span>{{ repo }}{% if dataset.year %}, {{ dataset.year }}{% endif %}</span>
@@ -26,14 +26,21 @@ description: "Datasets published by Juan Pablo Ripamonti, the Argentine Senate t
         <dl class="dataset-stats">
           {% for stat in dataset.stats %}
           <div class="stat">
-            <dt class="stat-value">{{ stat.value }}</dt>
-            <dd class="stat-label">{{ stat.label }}</dd>
+            <dt class="stat-label">{{ stat.label }}</dt>
+            <dd class="stat-value">{{ stat.value }}</dd>
           </div>
           {% endfor %}
         </dl>
         {% endif %}
 
-        <div id="dataset-details-{{ forloop.index }}" class="abstract-panel" aria-hidden="true">
+        <div class="publication-links">
+          <button class="toggle-abstract" type="button" aria-controls="dataset-details-{{ forloop.index }}" aria-expanded="false"><span class="toggle-verb">Show</span> details<span class="visually-hidden">: {{ dataset.title | escape }}</span></button>
+          {% if dataset.doi %}
+          <a class="publication-link" href="{{ dataset.doi }}" target="_blank" rel="noopener noreferrer">{{ repo }} record<span class="visually-hidden">: {{ dataset.title | escape }} (opens in new tab)</span></a>
+          {% endif %}
+        </div>
+
+        <div id="dataset-details-{{ forloop.index }}" class="abstract-panel" hidden>
           {% if dataset.description %}
           <p>{{ dataset.description }}</p>
           {% endif %}
@@ -45,13 +52,6 @@ description: "Datasets published by Juan Pablo Ripamonti, the Argentine Senate t
           {% endif %}
           {% if dataset.citation %}
           <p><span class="detail-label">Citation.</span> {{ dataset.citation }}</p>
-          {% endif %}
-        </div>
-
-        <div class="publication-links">
-          <button class="toggle-abstract" type="button" aria-controls="dataset-details-{{ forloop.index }}" aria-expanded="false" data-label-noun="details">Show details</button>
-          {% if dataset.doi %}
-          <a class="publication-link" href="{{ dataset.doi }}" target="_blank" rel="noopener noreferrer">{{ repo }} record</a>
           {% endif %}
         </div>
       </article>

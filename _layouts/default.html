@@ -22,14 +22,35 @@
 
   <script src="{{ '/libs/custom/my_js.js' | relative_url }}" defer></script>
 
-  <link rel="icon" type="image/png" href="{{ '/libs/icon.jpeg' | relative_url }}">
-  <link rel="shortcut icon" type="image/png" href="{{ '/libs/icon.jpeg' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
+
+  {% if page.url == '/' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": {{ site.data.main_info.name | jsonify }},
+    "url": {{ '/' | absolute_url | jsonify }},
+    "image": {{ site.data.main_info.profile_pic | absolute_url | jsonify }},
+    "description": {{ site.description | jsonify }},
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Bocconi University" },
+    "sameAs": [
+      {{ site.data.main_info.orcid | jsonify }},
+      {{ site.data.main_info.google_scholar | jsonify }},
+      {{ site.data.main_info.linkedin | jsonify }},
+      {{ site.data.main_info.github | jsonify }}
+    ]
+  }
+  </script>
+  {% endif %}
 
   {% if site.data.main_info.mastodon %}
   <link href="{{ site.data.main_info.mastodon }}" rel="me">
   {% endif %}
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <div class="shell">
 
     <header class="site-header">
@@ -52,28 +73,28 @@
         <div class="sidebar-links">
           {% if site.data.main_info.google_scholar %}
           <a href="{{ site.data.main_info.google_scholar }}" target="_blank" rel="noopener noreferrer" title="Google Scholar">
-            <i class="ai ai-google-scholar" aria-hidden="true"></i><span>Scholar</span>
+            <i class="ai ai-google-scholar" aria-hidden="true"></i><span>Scholar</span><span class="visually-hidden"> (opens in new tab)</span>
           </a>
           {% endif %}
           {% if site.data.main_info.orcid %}
           <a href="{{ site.data.main_info.orcid }}" target="_blank" rel="noopener noreferrer" title="ORCID">
-            <i class="ai ai-orcid" aria-hidden="true"></i><span>ORCID</span>
+            <i class="ai ai-orcid" aria-hidden="true"></i><span>ORCID</span><span class="visually-hidden"> (opens in new tab)</span>
           </a>
           {% endif %}
           {% if site.data.main_info.linkedin %}
           <a href="{{ site.data.main_info.linkedin }}" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-            <i class="fa fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span>
+            <i class="fa fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span><span class="visually-hidden"> (opens in new tab)</span>
           </a>
           {% endif %}
           {% if site.data.main_info.github %}
           <a href="{{ site.data.main_info.github }}" target="_blank" rel="noopener noreferrer" title="GitHub">
-            <i class="fa fa-github" aria-hidden="true"></i><span>GitHub</span>
+            <i class="fa fa-github" aria-hidden="true"></i><span>GitHub</span><span class="visually-hidden"> (opens in new tab)</span>
           </a>
           {% endif %}
         </div>
       </aside>
 
-      <main class="main-content">
+      <main class="main-content" id="main" tabindex="-1">
         {{ content }}
       </main>
 

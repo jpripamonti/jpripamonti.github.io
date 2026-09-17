@@ -19,19 +19,15 @@ description: "Papers by Juan Pablo Ripamonti on transparency, trust in governmen
       <h2 class="publication-section-title">Peer-reviewed publications</h2>
       {% for paper in peer_reviewed %}
       <article class="publication">
+        {% capture new_tab_suffix %}<span class="visually-hidden">: {{ paper.title | escape }} (opens in new tab)</span>{% endcapture %}
         <h3 class="publication-title">{{ paper.title }}</h3>
         <p class="publication-authors">{{ paper.authors }}</p>
         <p class="publication-venue">
           <span>{{ paper.venue }}{% if paper.year %}, {{ paper.year }}{% endif %}</span>
+          {% if paper.open_access %}<span class="publication-status">Open access</span>{% endif %}
         </p>
         {% if paper.award %}
         <p class="publication-award"><i class="fa fa-trophy" aria-hidden="true"></i> {{ paper.award }}</p>
-        {% endif %}
-
-        {% if paper.abstract %}
-        <div id="abstract-content-{{ paper.category }}-{{ forloop.index }}" class="abstract-panel" aria-hidden="true">
-          <p>{{ paper.abstract }}</p>
-        </div>
         {% endif %}
 
         {% if paper.data_note %}
@@ -40,37 +36,42 @@ description: "Papers by Juan Pablo Ripamonti on transparency, trust in governmen
 
         <div class="publication-links">
           {% if paper.abstract %}
-          <button class="toggle-abstract" type="button" aria-controls="abstract-content-{{ paper.category }}-{{ forloop.index }}" aria-expanded="false">Show abstract</button>
+          <button class="toggle-abstract" type="button" aria-controls="abstract-content-{{ paper.category }}-{{ forloop.index }}" aria-expanded="false"><span class="toggle-verb">Show</span> abstract<span class="visually-hidden">: {{ paper.title | escape }}</span></button>
           {% endif %}
           {% if paper.paper_pdf %}
-          <a class="publication-link" href="{{ paper.paper_pdf }}" target="_blank" rel="noopener noreferrer">Paper</a>
+          <a class="publication-link" href="{{ paper.paper_pdf }}" target="_blank" rel="noopener noreferrer">Paper{{ new_tab_suffix }}</a>
           {% endif %}
           {% if paper.preprint %}
-          <a class="publication-link" href="{{ paper.preprint }}" target="_blank" rel="noopener noreferrer">Preprint</a>
+          <a class="publication-link" href="{{ paper.preprint }}" target="_blank" rel="noopener noreferrer">Preprint{{ new_tab_suffix }}</a>
           {% endif %}
           {% if paper.code %}
-          <a class="publication-link" href="{{ paper.code }}" target="_blank" rel="noopener noreferrer">Code</a>
+          <a class="publication-link" href="{{ paper.code }}" target="_blank" rel="noopener noreferrer">Code{{ new_tab_suffix }}</a>
           {% endif %}
           {% if paper.data %}
-          <a class="publication-link" href="{{ paper.data }}" target="_blank" rel="noopener noreferrer">Data</a>
+          <a class="publication-link" href="{{ paper.data }}" target="_blank" rel="noopener noreferrer">Data{{ new_tab_suffix }}</a>
           {% endif %}
           {% if paper.appendix %}
-          <a class="publication-link" href="{{ paper.appendix }}" target="_blank" rel="noopener noreferrer">Appendix</a>
+          <a class="publication-link" href="{{ paper.appendix }}" target="_blank" rel="noopener noreferrer">Appendix{{ new_tab_suffix }}</a>
           {% endif %}
           {% if paper.prereg %}
-          <a class="publication-link" href="{{ paper.prereg }}" target="_blank" rel="noopener noreferrer">Registration</a>
+          <a class="publication-link" href="{{ paper.prereg }}" target="_blank" rel="noopener noreferrer">Registration{{ new_tab_suffix }}</a>
           {% endif %}
           {% if paper.slides %}
-          <a class="publication-link" href="{{ paper.slides }}" target="_blank" rel="noopener noreferrer">Slides</a>
+          <a class="publication-link" href="{{ paper.slides }}" target="_blank" rel="noopener noreferrer">Slides{{ new_tab_suffix }}</a>
           {% endif %}
           {% if paper.poster %}
-          <a class="publication-link" href="{{ paper.poster }}" target="_blank" rel="noopener noreferrer">Poster</a>
+          <a class="publication-link" href="{{ paper.poster }}" target="_blank" rel="noopener noreferrer">Poster{{ new_tab_suffix }}</a>
           {% endif %}
           {% if paper.video %}
-          <a class="publication-link" href="{{ paper.video }}" target="_blank" rel="noopener noreferrer">Video</a>
+          <a class="publication-link" href="{{ paper.video }}" target="_blank" rel="noopener noreferrer">Video{{ new_tab_suffix }}</a>
           {% endif %}
         </div>
 
+        {% if paper.abstract %}
+        <div id="abstract-content-{{ paper.category }}-{{ forloop.index }}" class="abstract-panel" hidden>
+          <p>{{ paper.abstract }}</p>
+        </div>
+        {% endif %}
       </article>
       {% endfor %}
       {% endif %}
@@ -79,31 +80,33 @@ description: "Papers by Juan Pablo Ripamonti on transparency, trust in governmen
       <h2 class="publication-section-title">Conference papers</h2>
       {% for paper in conference %}
       <article class="publication">
+        {% capture new_tab_suffix %}<span class="visually-hidden">: {{ paper.title | escape }} (opens in new tab)</span>{% endcapture %}
         <h3 class="publication-title">{{ paper.title }}</h3>
         <p class="publication-authors">{{ paper.authors }}</p>
         <p class="publication-venue">
           <span>{{ paper.venue }}{% if paper.year %}, {{ paper.year }}{% endif %}</span>
           {% if paper.forthcoming %}<span class="publication-status">Forthcoming</span>{% endif %}
         </p>
+        <div class="publication-links">
+          {% if paper.abstract %}
+          <button class="toggle-abstract" type="button" aria-controls="abstract-content-{{ paper.category }}-{{ forloop.index }}" aria-expanded="false"><span class="toggle-verb">Show</span> abstract<span class="visually-hidden">: {{ paper.title | escape }}</span></button>
+          {% endif %}
+          {% if paper.paper_pdf %}
+          <a class="publication-link" href="{{ paper.paper_pdf }}" target="_blank" rel="noopener noreferrer">Paper{{ new_tab_suffix }}</a>
+          {% endif %}
+          {% if paper.preprint %}
+          <a class="publication-link" href="{{ paper.preprint }}" target="_blank" rel="noopener noreferrer">Preprint{{ new_tab_suffix }}</a>
+          {% endif %}
+          {% if paper.slides %}
+          <a class="publication-link" href="{{ paper.slides }}" target="_blank" rel="noopener noreferrer">Slides{{ new_tab_suffix }}</a>
+          {% endif %}
+        </div>
+
         {% if paper.abstract %}
-        <div id="abstract-content-{{ paper.category }}-{{ forloop.index }}" class="abstract-panel" aria-hidden="true">
+        <div id="abstract-content-{{ paper.category }}-{{ forloop.index }}" class="abstract-panel" hidden>
           <p>{{ paper.abstract }}</p>
         </div>
         {% endif %}
-        <div class="publication-links">
-          {% if paper.abstract %}
-          <button class="toggle-abstract" type="button" aria-controls="abstract-content-{{ paper.category }}-{{ forloop.index }}" aria-expanded="false">Show abstract</button>
-          {% endif %}
-          {% if paper.paper_pdf %}
-          <a class="publication-link" href="{{ paper.paper_pdf }}" target="_blank" rel="noopener noreferrer">Paper</a>
-          {% endif %}
-          {% if paper.preprint %}
-          <a class="publication-link" href="{{ paper.preprint }}" target="_blank" rel="noopener noreferrer">Preprint</a>
-          {% endif %}
-          {% if paper.slides %}
-          <a class="publication-link" href="{{ paper.slides }}" target="_blank" rel="noopener noreferrer">Slides</a>
-          {% endif %}
-        </div>
       </article>
       {% endfor %}
       {% endif %}
@@ -112,22 +115,24 @@ description: "Papers by Juan Pablo Ripamonti on transparency, trust in governmen
       <h2 class="publication-section-title">Revise and resubmit</h2>
       {% for paper in revise_and_resubmit %}
       <article class="publication">
+        {% capture new_tab_suffix %}<span class="visually-hidden">: {{ paper.title | escape }} (opens in new tab)</span>{% endcapture %}
         <h3 class="publication-title">{{ paper.title }}</h3>
         <p class="publication-authors">{{ paper.authors }}</p>
         <p class="publication-venue">
           <span>{{ paper.venue }}</span>
           <span class="publication-status">R&amp;R</span>
         </p>
+        <div class="publication-links">
+          {% if paper.abstract %}
+          <button class="toggle-abstract" type="button" aria-controls="abstract-content-{{ paper.category }}-{{ forloop.index }}" aria-expanded="false"><span class="toggle-verb">Show</span> abstract<span class="visually-hidden">: {{ paper.title | escape }}</span></button>
+          {% endif %}
+        </div>
+
         {% if paper.abstract %}
-        <div id="abstract-content-{{ paper.category }}-{{ forloop.index }}" class="abstract-panel" aria-hidden="true">
+        <div id="abstract-content-{{ paper.category }}-{{ forloop.index }}" class="abstract-panel" hidden>
           <p>{{ paper.abstract }}</p>
         </div>
         {% endif %}
-        <div class="publication-links">
-          {% if paper.abstract %}
-          <button class="toggle-abstract" type="button" aria-controls="abstract-content-{{ paper.category }}-{{ forloop.index }}" aria-expanded="false">Show abstract</button>
-          {% endif %}
-        </div>
       </article>
       {% endfor %}
       {% endif %}
@@ -136,22 +141,24 @@ description: "Papers by Juan Pablo Ripamonti on transparency, trust in governmen
       <h2 class="publication-section-title">Under revision</h2>
       {% for paper in under_revision %}
       <article class="publication">
+        {% capture new_tab_suffix %}<span class="visually-hidden">: {{ paper.title | escape }} (opens in new tab)</span>{% endcapture %}
         <h3 class="publication-title">{{ paper.title }}</h3>
         <p class="publication-authors">{{ paper.authors }}</p>
         <p class="publication-venue">
           <span>{{ paper.venue }}</span>
           <span class="publication-status">Paper under revision</span>
         </p>
+        <div class="publication-links">
+          {% if paper.abstract %}
+          <button class="toggle-abstract" type="button" aria-controls="abstract-content-{{ paper.category }}-{{ forloop.index }}" aria-expanded="false"><span class="toggle-verb">Show</span> abstract<span class="visually-hidden">: {{ paper.title | escape }}</span></button>
+          {% endif %}
+        </div>
+
         {% if paper.abstract %}
-        <div id="abstract-content-{{ paper.category }}-{{ forloop.index }}" class="abstract-panel" aria-hidden="true">
+        <div id="abstract-content-{{ paper.category }}-{{ forloop.index }}" class="abstract-panel" hidden>
           <p>{{ paper.abstract }}</p>
         </div>
         {% endif %}
-        <div class="publication-links">
-          {% if paper.abstract %}
-          <button class="toggle-abstract" type="button" aria-controls="abstract-content-{{ paper.category }}-{{ forloop.index }}" aria-expanded="false">Show abstract</button>
-          {% endif %}
-        </div>
       </article>
       {% endfor %}
       {% endif %}
@@ -160,21 +167,23 @@ description: "Papers by Juan Pablo Ripamonti on transparency, trust in governmen
       <h2 class="publication-section-title">Book chapters</h2>
       {% for paper in book_chapters %}
       <article class="publication">
+        {% capture new_tab_suffix %}<span class="visually-hidden">: {{ paper.title | escape }} (opens in new tab)</span>{% endcapture %}
         <h3 class="publication-title">{{ paper.title }}</h3>
         <p class="publication-authors">{{ paper.authors }}</p>
         <p class="publication-venue">
           <span>{{ paper.venue }}{% if paper.year %}, {{ paper.year }}{% endif %}</span>
         </p>
+        <div class="publication-links">
+          {% if paper.abstract %}
+          <button class="toggle-abstract" type="button" aria-controls="abstract-content-{{ paper.category }}-{{ forloop.index }}" aria-expanded="false"><span class="toggle-verb">Show</span> abstract<span class="visually-hidden">: {{ paper.title | escape }}</span></button>
+          {% endif %}
+        </div>
+
         {% if paper.abstract %}
-        <div id="abstract-content-{{ paper.category }}-{{ forloop.index }}" class="abstract-panel" aria-hidden="true">
+        <div id="abstract-content-{{ paper.category }}-{{ forloop.index }}" class="abstract-panel" hidden>
           <p>{{ paper.abstract }}</p>
         </div>
         {% endif %}
-        <div class="publication-links">
-          {% if paper.abstract %}
-          <button class="toggle-abstract" type="button" aria-controls="abstract-content-{{ paper.category }}-{{ forloop.index }}" aria-expanded="false">Show abstract</button>
-          {% endif %}
-        </div>
       </article>
       {% endfor %}
       {% endif %}

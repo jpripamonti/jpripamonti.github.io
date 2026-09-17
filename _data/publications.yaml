@@ -59,7 +59,8 @@ papers:
   - title: "Does being informed about government transparency boost trust? Exploring an overlooked mechanism"
     authors: "Juan Pablo Ripamonti"
     venue: "Government Information Quarterly"
-    paper_pdf: "https://www.sciencedirect.com/science/article/pii/S0740624X24000522"
+    paper_pdf: "https://doi.org/10.1016/j.giq.2024.101960"
+    open_access: true
     data: "https://doi.org/10.7910/DVN/8T0XOD"
     appendix: "https://dataverse.harvard.edu/file.xhtml?fileId=14226943"
     abstract: |
