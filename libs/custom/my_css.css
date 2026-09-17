@@ -430,52 +430,12 @@ button { font: inherit; }
 
 .abstract-panel[hidden] { display: none; }
 
-/* ── Posts ── */
-.blog-post-detail {
-  font-size: 0.925rem;
-  line-height: 1.78;
-}
+/* ── Closing note ── */
+.section-outro { margin-top: 24px; }
 
-.post-header { margin-bottom: 22px; }
-
-.post-header h1 {
-  font-family: var(--serif);
-  font-size: 1.35rem;
-  font-weight: 500;
-  line-height: 1.35;
-  margin-bottom: 6px;
-}
-
-.post-meta {
+.section-outro p {
+  font-size: 0.875rem;
   color: var(--subtle);
-  font-size: 0.78rem;
-}
-
-.post-content p { margin-bottom: 1em; }
-
-.post-content pre {
-  max-width: 100%;
-  overflow-x: auto;
-  padding: 12px 14px;
-  margin: 16px 0;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  font-size: 0.82rem;
-}
-
-.post-content div.highlight { background: transparent; }
-
-.post-content code {
-  white-space: pre;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-}
-
-.post-content :not(pre) > code {
-  white-space: normal;
-  font-size: 0.88em;
-  padding: 1px 4px;
-  background: var(--surface);
-  border: 1px solid var(--border);
 }
 
 /* ── Other / Software ── */
