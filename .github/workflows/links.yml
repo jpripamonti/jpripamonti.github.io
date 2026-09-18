@@ -1,0 +1,25 @@
+name: Links
+
+on:
+  schedule:
+    - cron: "0 12 1 * *"
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2.4"
+          bundler-cache: true
+
+      - name: Build site
+        run: bundle exec jekyll build --trace
+
+      - name: Check links
+        run: python3 .github/scripts/check_links.py _site
