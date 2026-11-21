@@ -30,6 +30,8 @@ GUARDED_HOSTS = {
     "www.sciencedirect.com",
     "dataverse.harvard.edu",
     "scholar.google.com",
+    # Answers from a browser and from a Mac, but GitHub's runners get no reply.
+    "marroninstitute.nyu.edu",
 }
 
 
