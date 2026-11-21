@@ -23,3 +23,14 @@ jobs:
 
       - name: Check links
         run: python3 .github/scripts/check_links.py _site
+
+      - name: Healthchecks
+        # Tells Healthchecks.io how the run ended (the dashboard of every scheduled task).
+        if: always()
+        env:
+          URL: ${{ secrets.HEALTHCHECKS_URL_LINKS }}
+          STATUS: ${{ job.status }}
+        run: |
+          [ -n "$URL" ] || exit 0
+          [ "$STATUS" = success ] || URL="$URL/fail"
+          curl -fsS -m 10 --retry 3 -o /dev/null "$URL" || true
